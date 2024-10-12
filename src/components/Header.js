@@ -1,6 +1,6 @@
 // src/components/Header.js
 import React from "react";
-
+import Resume from "../assets/Rawhi Al-far - Resume.pdf"
 const Header = () => {
   return (
     <nav className="flex justify-between items-center py-5 px-10 bg-gray-900">
@@ -21,7 +21,7 @@ const Header = () => {
           <i class='bx bx-envelope'></i>
         </a>
         <a
-          href="../assets/Rawhi Al-far - Resume.pdf"
+          href={Resume}
           target="_blank" 
           rel="noopener noreferrer"
           className="bg-gray-700 py-2 px-4 rounded-lg hover:bg-gray-600"
