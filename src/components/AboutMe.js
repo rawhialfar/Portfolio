@@ -6,7 +6,7 @@ const AboutMe = () => {
 			id="about"
 			className="pb-10 bg-gray-800 text-white flex flex-col items-center justify-center"
 		>
-			<h2 className="text-4xl font-bold mb-8  text-center">About Me</h2>
+			<h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
 			<div className="sm:w-full xsx:w-[50rem] :w-full text-center space-y-5">
 				<p className="text-xl mx-auto">
 					I'm a passionate Software Engineering student enrolled in the

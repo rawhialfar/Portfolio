@@ -10,9 +10,7 @@ const Projects = () => {
 			id="projects"
 			className="flex flex-col items-center py-20 px-10 bg-gray-800 text-white"
 		>
-			<h2 className="text-4xl font-bold mb-8 w-[110rem] text-center">
-				Projects
-			</h2>
+			<h2 className="text-4xl font-bold mb-8 text-center">Projects</h2>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[120rem]">
 				<div className="bg-gray-700 p-6 rounded-lg shadow-lg 3xl:h-[51rem] flex flex-col items-center flex-grow-0">
