@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Resume } from "../path/to/Resume"; // Adjust path to your resume
+import Resume from "../assets/Rawhi_Al-far_Resume.pdf"; // Adjust path to your resume
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
