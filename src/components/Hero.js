@@ -44,7 +44,7 @@ const Hero = () => {
 	return (
 		<section
 			id="hero"
-			className="sticky py-20 px-10 bg-gray-800 text-white flex items-start justify-center"
+			className="static md:h-full h-[60rem] py-20 px-10 bg-gray-800 text-white flex items-start justify-center"
 		>
 			{/* Background SVG */}
 			<div className=" inset-0 h-[20px]"></div>

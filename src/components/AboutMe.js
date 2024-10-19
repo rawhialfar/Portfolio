@@ -4,10 +4,10 @@ const AboutMe = () => {
 	return (
 		<section
 			id="about"
-			className="pb-20 bg-gray-800 text-white flex flex-col items-center justify-center"
+			className="pb-10 bg-gray-800 text-white flex flex-col items-center justify-center"
 		>
 			<h2 className="text-4xl font-bold mb-8  text-center">About Me</h2>
-			<div className="w-full text-center space-y-5 px-5">
+			<div className="sm:w-full xsx:w-[50rem] :w-full text-center space-y-5">
 				<p className="text-xl mx-auto">
 					I'm a passionate Software Engineering student enrolled in the
 					Bachelor's of Computing Program (co-op) at the University of Guelph.

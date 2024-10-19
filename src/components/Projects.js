@@ -24,7 +24,7 @@ const Projects = () => {
 						<img
 							src={webserver}
 							alt="Molecule Viewer"
-							className="h-[450px] object-fill rounded-lg mb-4"
+							className="sm:h-[450px] w-full h-6/8 object-fill rounded-lg mb-4"
 						/>
 					</div>
 					<ul className="list-disc ml-8">
@@ -60,12 +60,12 @@ const Projects = () => {
 					<img
 						src={CourseManager}
 						alt="Course Manager"
-						className="w-full h-[310px] object-fill rounded-lg mb-4"
+						className="w-full sm:h-[310px] object-fill rounded-lg mb-4"
 					/>
 					<img
 						src={CourseTable}
 						alt="Course Manager"
-						className="w-full h-[150px] object-fill rounded-lg mb-4"
+						className="w-full sm:h-[150px] object-fill rounded-lg mb-4"
 					/>
 					<ul className="list-disc ml-8 ">
 						<li>
@@ -105,7 +105,7 @@ const Projects = () => {
 					<img
 						src={WeatherApp}
 						alt="Weather App"
-						className=" h-[30rem] object-fill rounded-lg mb-4"
+						className="sm:h-[30rem] object-fill rounded-lg mb-4"
 					/>
 					<ul className="list-disc ml-8 ">
 						<li>
