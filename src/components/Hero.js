@@ -13,12 +13,11 @@ const stringsToRender = [
 	"mobile developer",
 	"web developer",
 	"front end developer",
-	"qualitey engineer",
+	"quality engineer",
 	"quality analyst",
 	"test engineer",
 	"traveller",
-	"lover of nature",
-	"passionate coder",
+	"passionate coder"
 ];
 // export function ParticlesContainer (props: any) {
 //   // this customizes the component tsParticles installation
@@ -64,37 +63,37 @@ const Hero = () => {
 						events: {
 							onClick: {
 								enable: true,
-								mode: "push",
+								mode: "push"
 							},
 							onHover: {
 								enable: true,
-								mode: "repulse",
+								mode: "repulse"
 							},
-							resize: true,
+							resize: true
 						},
 						modes: {
 							push: {
-								quantity: 4,
+								quantity: 4
 							},
 							repulse: {
 								distance: 200,
-								duration: 0.4,
-							},
-						},
+								duration: 0.4
+							}
+						}
 					},
 					particles: {
 						shape: {
-							type: "circle",
+							type: "circle"
 						},
 						color: {
-							value: "#ffffff",
+							value: "#ffffff"
 						},
 						links: {
 							color: "#ffffff",
 							distance: 150,
 							enable: true,
 							opacity: 0.5,
-							width: 1,
+							width: 1
 						},
 						move: {
 							direction: "none",
@@ -102,19 +101,19 @@ const Hero = () => {
 							outMode: "bounce",
 							random: false,
 							speed: 2,
-							straight: false,
+							straight: false
 						},
 						number: {
 							density: {
 								enable: true,
-								area: 800,
+								area: 800
 							},
-							value: 80,
+							value: 80
 						},
 						opacity: {
-							value: 0.5,
-						},
-					},
+							value: 0.5
+						}
+					}
 				}}
 			/>
 
@@ -127,14 +126,14 @@ const Hero = () => {
 					/>
 				</div>
 
-				<div className="lg:w-4/6 w-full text-center lg:text-left space-y-5 px-5">
+				<div className="w-full text-start lg:text-left space-y-5 px-5">
 					<h1 className="text-4xl mt-5 font-bold w-full text-center">
-						Hey, my name is Rawhi and I'm a{" "}
+						Hi, my name is Rawhi and I'm a{" "}
 						<span
 							style={{
 								display: "inline-block",
 								minHeight: "1.5em",
-								lineHeight: "1.5em",
+								lineHeight: "1.5em"
 							}}
 						>
 							<ReactTyped
