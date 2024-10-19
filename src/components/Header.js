@@ -60,7 +60,7 @@ const Navbar = () => {
 			<div
 				className={`${
 					isOpen ? "block" : "hidden"
-				} md:hidden absolute top-16 left-0 w-full bg-gray-900 py-5 space-y-4 flex flex-col items-center z-50`}
+				} md:hidden absolute top-16 left-0 w-full bg-gray-900 py-5 space-y-4 flex flex-col items-center z-0`}
 			>
 				<a href="#about" className="text-xl hover:text-gray-400">
 					About Me
