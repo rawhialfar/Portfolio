@@ -1,14 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.ab4f0ff3.css",
-    "main.js": "/static/js/main.c30ceb85.js",
+    "main.css": "/static/css/main.fa400a34.css",
+    "main.js": "/static/js/main.6bc5c630.js",
+    "static/media/CourseManager.png": "/static/media/CourseManager.2c27db130b9bc3b34bdc.png",
     "static/media/portrait.jpg": "/static/media/portrait.9afa21d84ebf63084e01.jpg",
+    "static/media/WeatherApp.png": "/static/media/WeatherApp.70826cb590370e4ed538.png",
+    "static/media/CourseTable.png": "/static/media/CourseTable.35476963184afac4cd6c.png",
+    "static/media/Rawhi Al-far - Resume.pdf": "/static/media/Rawhi Al-far - Resume.a46d2e3c78a0bea5fae0.pdf",
+    "static/media/Webserver.png": "/static/media/Webserver.973aa710439490e046ca.png",
+    "static/media/TDBank.png": "/static/media/TDBank.7b9040d0ac09804b628d.png",
+    "static/media/FIF.jpg": "/static/media/FIF.218d059818a3c4ad3e9c.jpg",
     "index.html": "/index.html",
-    "main.ab4f0ff3.css.map": "/static/css/main.ab4f0ff3.css.map",
-    "main.c30ceb85.js.map": "/static/js/main.c30ceb85.js.map"
+    "main.fa400a34.css.map": "/static/css/main.fa400a34.css.map",
+    "main.6bc5c630.js.map": "/static/js/main.6bc5c630.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab4f0ff3.css",
-    "static/js/main.c30ceb85.js"
+    "static/css/main.fa400a34.css",
+    "static/js/main.6bc5c630.js"
   ]
 }
