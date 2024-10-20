@@ -1,3 +1,4 @@
+// src/components/Navbar.js
 import { useState } from "react";
 import Resume from "../assets/Rawhi Al-far - Resume.pdf"; // Adjust path to your resume
 
@@ -9,9 +10,11 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="flex justify-between items-center py-5 px-10 bg-gray-900">
+		<nav className="flex h-20 justify-between items-center py-5 px-10 bg-gray-900 top-0 left-0 right-0 z-50">
 			{/* Logo */}
-			<div className="text-3xl font-bold">Rawhi Alfar</div>
+			<div className="text-3xl font-bold">
+				<span className="hover:text-gray-400 cursor-pointer">Rawhi Alfar</span>
+			</div>
 
 			{/* Menu for larger screens */}
 			<div className="hidden md:flex space-x-8">
@@ -48,7 +51,7 @@ const Navbar = () => {
 			</div>
 
 			{/* Hamburger Icon for mobile */}
-			<div className="md:hidden">
+			<div className="md:hidden right-0 fixed bg-gray-900 p-2">
 				<button onClick={toggleMenu} className="text-white focus:outline-none">
 					<i
 						className={isOpen ? "bx bx-x text-3xl" : "bx bx-menu text-3xl"}
@@ -60,8 +63,11 @@ const Navbar = () => {
 			<div
 				className={`${
 					isOpen ? "block" : "hidden"
-				} md:hidden absolute top-16 left-0 w-full bg-gray-900 py-5 space-y-4 flex flex-col items-center z-50`}
+				} md:hidden fixed top-16 left-0 w-full bg-gray-900 py-5 space-y-4 flex flex-col items-center z-50`}
 			>
+				<a href="#hero" className="text-xl hover:text-gray-400">
+					Hero
+				</a>
 				<a href="#about" className="text-xl hover:text-gray-400">
 					About Me
 				</a>

@@ -57,7 +57,7 @@ html {
 body {
 	margin: var(--header-height) 0 0 0;
 	font-family: var(--body-font);
-	background-color: rgb(28, 28, 28);
+	background-color: rgb(31, 41, 55);
 	font-size: var(--normal-font-size);
 	width: 100%;
 	color: var(--second-color);
@@ -418,5 +418,41 @@ img {
 	}
 	.home__img {
 		right: 10%;
+	}
+}
+
+/* In your styles.css or a similar file */
+@media (max-width: 520px) {
+	/* Tailwind's sm breakpoint */
+	.dynamic-top {
+		top: 10%; /* or whatever value you want */
+	}
+}
+
+@media (max-width: 640px) {
+	/* Tailwind's sm breakpoint */
+	.dynamic-top {
+		top: 60%; /* or whatever value you want */
+	}
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+	/* sm to md */
+	.dynamic-top {
+		top: 35rem;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	/* md to lg */
+	.dynamic-top {
+		top: 45rem; /* or another value */
+	}
+}
+
+@media (min-width: 1024px) {
+	/* lg and up */
+	.dynamic-top {
+		top: 48rem;
 	}
 }

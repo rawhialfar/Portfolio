@@ -1,152 +1,97 @@
 // src/components/Hero.js
 import React from "react";
 import portrait from "../assets/img/portrait.jpg";
-import ParticleBg from "./ParticleBackground";
 import Particles from "react-particles";
 import { Engine } from "@tsparticles/engine";
-import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import { ReactTyped } from "react-typed";
+import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
+import Navbar from "./Navbar";
+import "./sky.scss";
+const tsParticles = require("@tsparticles/engine");
 const stringsToRender = [
-	"full stack developer",
 	"software engineer",
-	"mobile developer",
-	"web developer",
-	"front end developer",
-	"quality engineer",
-	"quality analyst",
-	"test engineer",
-	"traveller",
-	"passionate coder"
+	"developer",
+	"tester",
+	"programmer",
+	"passionate coder",
+	"tech enthusiast",
+	"student",
+	"traveller"
 ];
-// export function ParticlesContainer (props: any) {
-//   // this customizes the component tsParticles installation
-//   const customInit = useCallback(async (engine: Engine) => {
-//     // this adds the bundle to tsParticles
-//     await loadFull(engine);
-//   });
 
-//   const options = {
-//     /* custom options */
-//   };
+const colors = [
+	"#ff0000", // red
+	"#ff7f00", // orange
+	"#ffff00", // yellow
+	"#00ff00", // green
+	"#0060ff", // blue
+	"#8b00ff" // violet
+];
 
-//   return <Particles options={options} init={this.customInit} />;
-// }
 const Hero = () => {
-	const particlesLoaded = useCallback(async (container) => {
-		console.log("Particles container loaded", container);
-	}, []);
-	const customInit = useCallback(async (engine) => {
-		// this adds the bundle to tsParticles
-		await loadFull(engine);
-	});
+	const [colorIndex, setColorIndex] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
+		}, 2500);
+
+		return () => clearInterval(interval); // Clear the interval on unmount
+	}, [colors.length]);
 
 	return (
-		<section
-			id="hero"
-			className="static md:h-full h-[60rem] py-20 px-10 bg-gray-800 text-white flex items-start justify-center"
-		>
-			{/* Background SVG */}
-			<div className=" inset-0 h-[20px]"></div>
-			<Particles
-				id="tsparticles"
-				particlesInit="particlesInit"
-				loaded={particlesLoaded}
-				options={{
-					// background: {
-					// 	color: {
-					// 		value: "#1f2937",
-					// 	},
-					// },
-					fpsLimit: 120,
-					interactivity: {
-						events: {
-							onClick: {
-								enable: true,
-								mode: "push"
-							},
-							onHover: {
-								enable: true,
-								mode: "repulse"
-							},
-							resize: true
-						},
-						modes: {
-							push: {
-								quantity: 4
-							},
-							repulse: {
-								distance: 200,
-								duration: 0.4
-							}
-						}
-					},
-					particles: {
-						shape: {
-							type: "circle"
-						},
-						color: {
-							value: "#ffffff"
-						},
-						links: {
-							color: "#ffffff",
-							distance: 150,
-							enable: true,
-							opacity: 0.5,
-							width: 1
-						},
-						move: {
-							direction: "none",
-							enable: true,
-							outMode: "bounce",
-							random: false,
-							speed: 2,
-							straight: false
-						},
-						number: {
-							density: {
-								enable: true,
-								area: 800
-							},
-							value: 80
-						},
-						opacity: {
-							value: 0.5
-						}
-					}
-				}}
-			/>
+		<section id="hero">
+			<Navbar />
 
-			<div className="flex flex-col justify-center items-center space-y-10 lg:space-y-0 ">
-				<div className=" w-full flex justify-center">
-					<img
-						src={portrait}
-						alt="Picture of me"
-						className="w-[400px] rounded-lg shadow-lg"
-					/>
-				</div>
+			<div id="stars"></div>
+			<div id="stars2"></div>
+			<div id="stars3"></div>
+			<section className="static md:h-full h-[60rem] py-20 mt-[-6px] px-10 bg-gray-900 text-white flex items-start justify-center">
+				<div className="flex flex-col  justify-center items-center space-y-10 lg:space-y-0 ">
+					<div className="static transform -translate-x-4/5 flex justify-center">
+						<img
+							src={portrait}
+							alt="Picture of me"
+							className="w-[400px] rounded-lg shadow-lg"
+						/>
+					</div>
 
-				<div className="w-full text-start lg:text-left space-y-5 px-5">
-					<h1 className="text-4xl mt-5 font-bold w-full text-center">
-						Hi, my name is Rawhi and I'm a{" "}
-						<span
+					<div className="w-full  text-start flex flex-col space-y-3 px-5">
+						{/* Static Text */}
+						<h1 className="text-3xl mt-5 font-bold w-full text-center mb-[-15px]">
+							Hi, my name is Rawhi and I'm a
+						</h1>
+						{/* <div class="text-container">
+						<h1>Rawhi Alfar</h1>
+					</div> */}
+						{/* Dynamic Typed Text */}
+						<h2
+							className=" text-3xl font-bold w-full text-center"
 							style={{
-								display: "inline-block",
-								minHeight: "1.5em",
-								lineHeight: "1.5em"
+								color: colors[colorIndex],
+								transition: "color 2s ease"
 							}}
 						>
 							<ReactTyped
 								strings={stringsToRender}
-								typeSpeed={70}
-								backSpeed={70}
-								className="text-green-500 text-center"
+								typeSpeed={80}
+								backSpeed={80}
 								loop
 							/>
-						</span>
-					</h1>
+						</h2>
+					</div>
+					<Link
+						to="about" // Make sure the About section has this id
+						smooth={true}
+						duration={500}
+						className="arrow-icon text-4xl lg:pt-10 cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
+					>
+						<i className="bx bxs-chevron-down"></i> {/* Arrow Icon */}
+					</Link>
 				</div>
-			</div>
+			</section>
 		</section>
 	);
 };
