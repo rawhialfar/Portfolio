@@ -118,7 +118,7 @@ const Hero = () => {
 			/>
 
 			<div className="flex flex-col justify-center items-center space-y-10 lg:space-y-0 ">
-				<div className="w-full flex justify-center">
+				<div className=" w-full flex justify-center">
 					<img
 						src={portrait}
 						alt="Picture of me"
