@@ -12,11 +12,12 @@ function VaraText() {
 			[
 				{
 					text: text,
-					fontSize: 60,
+					fontSize: 55,
 					strokeWidth: 1.1,
 					color: "#fff",
 					autoAnimation: true,
-					duration: 4000
+					duration: 4000,
+					letterSpacing: 2
 				}
 			]
 		);
@@ -25,8 +26,8 @@ function VaraText() {
 	return (
 		<div
 			id="logo"
-			className="w-full max-h-20 max-w-[1000px] mx-auto ws-nowrap"
-			style={{ height: "200px", textAlign: "left", whiteSpace: "nowrap" }}
+			className="w-full max-h-20 max-w-[1200px] mx-auto ws-nowrap"
+			style={{ height: "200px", textAlign: "center", whiteSpace: "nowrap" }}
 		></div>
 	);
 }

@@ -13,6 +13,8 @@ body {
 #logo {
 	width: 100%; /* Make sure the container has enough width */
 	text-align: center;
+	flex: 1;
+	flex-direction: row;
 }
 #tsparticles {
 	top: 0;
