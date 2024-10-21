@@ -22,7 +22,13 @@ function VaraText() {
 		);
 	}, []);
 
-	return <div id="logo" className="w-full h-20"></div>;
+	return (
+		<div
+			id="logo"
+			className="w-full max-h-20 max-w-[1000px] mx-auto ws-nowrap"
+			style={{ height: "200px", textAlign: "left", whiteSpace: "nowrap" }}
+		></div>
+	);
 }
 
 export default VaraText;
