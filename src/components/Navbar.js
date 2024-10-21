@@ -10,14 +10,18 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="flex h-20 justify-between items-center py-5 px-10 bg-gray-900 top-0 left-0 right-0 z-50">
-			{/* Logo */}
+		<nav className="flex h-20 justify-between items-center py-5 px-10 fixed top-0 left-0 right-0 z-20">
 			<div className="text-3xl font-bold">
-				<span className="hover:text-gray-400 cursor-pointer">Rawhi Alfar</span>
+				<a
+					href="#hero"
+					className="hover:text-gray-400 cursor-pointer relative z-50"
+				>
+					Rawhi Alfar
+				</a>
 			</div>
 
 			{/* Menu for larger screens */}
-			<div className="hidden md:flex space-x-8">
+			<div className="relative z-50 hidden md:flex space-x-8">
 				<a href="#about" className="hover:text-gray-400">
 					About Me
 				</a>
@@ -30,7 +34,7 @@ const Navbar = () => {
 			</div>
 
 			{/* Icons and Resume link for larger screens */}
-			<div className="hidden md:flex items-center space-x-4">
+			<div className="relative z-50 hidden md:flex items-center space-x-4">
 				<a href="https://www.linkedin.com/in/rawhi-alfar" className="text-xl">
 					<i className="bx bxl-linkedin"></i>
 				</a>

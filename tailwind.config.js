@@ -7,7 +7,7 @@ module.exports = {
 				144: "36rem"
 			},
 			screens: {
-				xss: "300px",
+				xss: "400px",
 				xs: "450px",
 				xsx: "500px",
 				sm: "615px",

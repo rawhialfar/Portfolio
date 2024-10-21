@@ -10,11 +10,15 @@
 body {
 	overflow-x: hidden;
 }
-.tsParticles {
-	position: absolute;
+
+#tsparticles {
+	overflow: hidden;
+	z-index: 100;
 	top: 0;
 	left: 0;
-	z-index: 1; /* Below the hero */
+	right: 0;
+	bottom: 0;
+	position: absolute;
 }
 
 .hero-content {

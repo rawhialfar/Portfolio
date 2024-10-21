@@ -1,13 +1,13 @@
 import React from "react";
-
+import ParticlesComponent from "./ParticlesComponent";
 const AboutMe = () => {
 	return (
 		<section
 			id="about"
-			className="pb-10 pt-10 text-white flex flex-col items-center justify-center"
+			className="z-[-1] pb-10 pt-10 text-white flex flex-col items-center justify-center overflow-x-hidden"
 		>
 			<h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
-			<div className="sm:w-full xsx:w-[50rem] text-center space-y-5">
+			<div className="sm:w-full xss:w-[140%] text-center space-y-5 ">
 				<p className="text-xl mx-auto">
 					I'm a passionate Software Engineering student enrolled in the
 					Bachelor's of Computing Program (co-op) at the University of Guelph.

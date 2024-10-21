@@ -1,15 +1,13 @@
 // src/components/Hero.js
 import React from "react";
 import portrait from "../assets/img/portrait.jpg";
-import Particles from "react-particles";
-import { Engine } from "@tsparticles/engine";
-import { useCallback } from "react";
+import selfie from "../assets/img/selfie.png";
 import { ReactTyped } from "react-typed";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import Navbar from "./Navbar";
-import "./sky.scss";
-const tsParticles = require("@tsparticles/engine");
+import ParticlesComponent from "./ParticlesComponent";
+
 const stringsToRender = [
 	"software engineer",
 	"developer",
@@ -31,6 +29,7 @@ const colors = [
 ];
 
 const Hero = () => {
+	const [someState, setSomeState] = useState(false); // Example state
 	const [colorIndex, setColorIndex] = useState(0);
 
 	useEffect(() => {
@@ -43,16 +42,17 @@ const Hero = () => {
 
 	return (
 		<section id="hero">
+			<div className="fixed top-0 left-0 w-full h-20 bg-gray-900 z-0">
+				{/* Transparent banner background */}
+			</div>
 			<Navbar />
+			<ParticlesComponent />
 
-			<div id="stars"></div>
-			<div id="stars2"></div>
-			<div id="stars3"></div>
-			<section className="static md:h-full h-[60rem] py-20 mt-[-6px] px-10 bg-gray-900 text-white flex items-start justify-center">
+			<section className="mt-[76px] md:h-[52.8rem] h-[60rem] py-20  px-10 bg-gray-900 text-white flex items-start justify-center">
 				<div className="flex flex-col  justify-center items-center space-y-10 lg:space-y-0 ">
-					<div className="static transform -translate-x-4/5 flex justify-center">
+					<div className="static transform -translate-x-4/5 flex justify-center z-40">
 						<img
-							src={portrait}
+							src={selfie}
 							alt="Picture of me"
 							className="w-[400px] rounded-lg shadow-lg"
 						/>
@@ -76,17 +76,17 @@ const Hero = () => {
 						>
 							<ReactTyped
 								strings={stringsToRender}
-								typeSpeed={80}
-								backSpeed={80}
+								typeSpeed={90}
+								backSpeed={90}
 								loop
 							/>
 						</h2>
 					</div>
 					<Link
-						to="about" // Make sure the About section has this id
+						to="about" // Ensure the About section has this id
 						smooth={true}
 						duration={500}
-						className="arrow-icon text-4xl lg:pt-10 cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
+						className="relative z-50 arrow-icon text-4xl lg:pt-10 cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
 					>
 						<i className="bx bxs-chevron-down"></i> {/* Arrow Icon */}
 					</Link>
