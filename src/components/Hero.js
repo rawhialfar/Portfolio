@@ -97,7 +97,8 @@ const Hero = () => {
 						to="about"
 						smooth={true}
 						duration={500}
-						className="relative z-40 arrow-icon text-4xl xl:pt-[10rem] pt-[5rem] cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
+						offset={-100}
+						className="scroll-mt-16 relative z-10 arrow-icon text-4xl xl:pt-[10rem] pt-[5rem] cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
 					>
 						<i className="bx bxs-chevron-down"></i>
 					</Link>

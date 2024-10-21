@@ -1,5 +1,5 @@
 // src/components/Navbar.js
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Resume from "../assets/Rawhi Al-far - Resume.pdf"; // Adjust path to your resume
 import ParticlesComponent from "./ParticlesComponent";
 import Font, { Text } from "react-font";
@@ -7,13 +7,34 @@ import VaraText from "./VaraText";
 import Logo from "./Logo";
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
 	};
 
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 0) {
+				setIsScrolled(true); // User has scrolled down
+			} else {
+				setIsScrolled(false); // User is at the top of the page
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		// Cleanup listener on component unmount
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 	return (
-		<nav className="flex h-20 justify-between items-center py-5 px-10 fixed top-0 left-0 right-0 z-50">
+		<nav
+			className={`flex h-20 justify-between items-center py-5 px-10 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
+				isScrolled ? "bg-gray-900" : "bg-transparent"
+			}`}
+		>
 			{/* <Font family="Mr De Haviland" onAllLoad={() => console.log("all loaded")}> */}
 			<Font family="Whisper" onAllLoad={() => console.log("all loaded")}>
 				{/* <Font family="Alex Brush" onAllLoad={() => console.log("all loaded")}> */}
