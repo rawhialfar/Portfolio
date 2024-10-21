@@ -56,18 +56,49 @@ const Navbar = () => {
 			<div className="relative hidden md:flex space-x-8 ml-[-8rem]">
 				<a
 					href="#about"
+					onClick={(e) => {
+						e.preventDefault(); // Prevent default jump behavior
+						const element = document.getElementById("about");
+						const yOffset = -100; // Set your desired offset (e.g., 100px above)
+						const y =
+							element.getBoundingClientRect().top +
+							window.pageYOffset +
+							yOffset;
+						window.scrollTo({ top: y, behavior: "smooth" });
+					}}
 					className="hover:text-gray-400 transition-transform duration-300 ease-in-out hover:-translate-y-1"
 				>
 					About Me
 				</a>
+
 				<a
 					href="#experience"
+					onClick={(e) => {
+						e.preventDefault();
+						const element = document.getElementById("experience");
+						const yOffset = -100;
+						const y =
+							element.getBoundingClientRect().top +
+							window.pageYOffset +
+							yOffset;
+						window.scrollTo({ top: y, behavior: "smooth" });
+					}}
 					className="hover:text-gray-400 transition-transform duration-300 ease-in-out hover:-translate-y-1"
 				>
 					Experience
 				</a>
 				<a
 					href="#projects"
+					onClick={(e) => {
+						e.preventDefault();
+						const element = document.getElementById("projects");
+						const yOffset = -100;
+						const y =
+							element.getBoundingClientRect().top +
+							window.pageYOffset +
+							yOffset;
+						window.scrollTo({ top: y, behavior: "smooth" });
+					}}
 					className="hover:text-gray-400 transition-transform duration-300 ease-in-out hover:-translate-y-1"
 				>
 					Projects
