@@ -3,42 +3,37 @@ import { useState } from "react";
 import Resume from "../assets/Rawhi Al-far - Resume.pdf"; // Adjust path to your resume
 import ParticlesComponent from "./ParticlesComponent";
 import Font, { Text } from "react-font";
+import Vara from "vara";
 import VaraText from "./VaraText";
-import whisper from "../assets/Whisper-Regular.json";
+import Logo from "./Logo";
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
 	};
-	var vara = new Vara(
-		"#vara-container",
-		"https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
-		[
-			{
-				text: "Rawhi Alfar",
-				fontSize: 55,
-				strokeWidth: 0.7
-			}
-		]
-	);
+
 	return (
 		<nav className="flex h-20 justify-between items-center py-5 px-10 fixed top-0 left-0 right-0 z-50">
 			{/* <Font family="Mr De Haviland" onAllLoad={() => console.log("all loaded")}> */}
 			<Font family="Whisper" onAllLoad={() => console.log("all loaded")}>
 				{/* <Font family="Alex Brush" onAllLoad={() => console.log("all loaded")}> */}
-				<div className="text-[55px] font-bold space-x-8 flex">
-					<a
-						href="#hero"
-						className="hover:text-gray-400 relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
-					>
-						Rawhi Alfar
-					</a>
+
+				<div
+					id="logo"
+					className="hover:opacity-80 top-[10px] text-nowrap cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					onClick={() =>
+						document
+							.getElementById("hero")
+							.scrollIntoView({ behavior: "smooth" })
+					}
+				>
+					<Logo />
 				</div>
 			</Font>
 
 			{/* Menu for larger screens */}
-			<div className="relative hidden md:flex space-x-8 ml-[-40px]">
+			<div className="relative hidden md:flex space-x-8 ml-[-8rem]">
 				<a
 					href="#about"
 					className="hover:text-gray-400 transition-transform duration-300 ease-in-out hover:-translate-y-1"

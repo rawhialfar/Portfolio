@@ -10,7 +10,12 @@
 body {
 	overflow-x: hidden;
 }
-
+#logo {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	height: auto;
+}
 #tsparticles {
 	overflow: hidden;
 	z-index: 250;
