@@ -51,7 +51,7 @@ const Experience = () => {
 						</div>
 						<img
 							src={FIF}
-							className="h-[225px] ml-4 rounded-lg w-[240px] object-fill self-center xss:mt-10 xs:mt-3"
+							className="h-[225px] ml-4 rounded-lg w-[240px] object-fill self-center xss:mt-5 xs:mt-3"
 							alt="Fill it Forward"
 						/>
 					</div>
@@ -92,7 +92,7 @@ const Experience = () => {
 						</div>
 						<img
 							src={tamvoes}
-							className="h-[225px] object-fill rounded-lg ml-5 self-center xss:mt-10 xs:mt-3"
+							className="h-[225px] object-fill rounded-lg ml-5 self-center xss:mt-5 xs:mt-3"
 							alt="TAMVOES"
 						/>
 					</div>
@@ -139,7 +139,7 @@ const Experience = () => {
 						</div>
 						<img
 							src={TD}
-							className="h-[200px] object-fill rounded-lg ml-5 self-center xs:mt-3 xss:mt-10"
+							className="h-[200px] object-fill rounded-lg ml-5 self-center xs:mt-3 xss:mt-5"
 							alt="TD Bank"
 						/>
 					</div>
