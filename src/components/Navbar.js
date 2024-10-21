@@ -41,13 +41,13 @@ const Navbar = () => {
 				</a>
 				<a
 					href="#experience"
-					className="hover:text-gray-400 transition-transform duration-300 ease-in-out hover:-translate-y-2"
+					className="hover:text-gray-400 transition-transform duration-300 ease-in-out hover:-translate-y-1"
 				>
 					Experience
 				</a>
 				<a
 					href="#projects"
-					className="hover:text-gray-400 transition-transform duration-300 ease-in-out hover:-translate-y-2"
+					className="hover:text-gray-400 transition-transform duration-300 ease-in-out hover:-translate-y-1"
 				>
 					Projects
 				</a>
