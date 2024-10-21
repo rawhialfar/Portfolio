@@ -11,10 +11,10 @@ body {
 	overflow-x: hidden;
 }
 #logo {
+	width: 100%; /* Make sure the container has enough width */
+	max-width: 1000px; /* Optional: Add a reasonable max width */
 	margin: 0 auto;
 	text-align: center;
-	width: 100%;
-	height: auto;
 }
 #tsparticles {
 	overflow: hidden;

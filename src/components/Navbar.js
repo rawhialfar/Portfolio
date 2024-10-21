@@ -3,7 +3,6 @@ import { useState } from "react";
 import Resume from "../assets/Rawhi Al-far - Resume.pdf"; // Adjust path to your resume
 import ParticlesComponent from "./ParticlesComponent";
 import Font, { Text } from "react-font";
-import Vara from "vara";
 import VaraText from "./VaraText";
 import Logo from "./Logo";
 const Navbar = () => {

@@ -12,17 +12,17 @@ function VaraText() {
 			[
 				{
 					text: text, // The text to be animated
-					fontSize: 70, // Size of the text
+					fontSize: 65, // Size of the text
 					strokeWidth: 1.1, // Width of the stroke
 					color: "#fff", // Color of the stroke
-					autoAnimation: true // Whether to animate the text
+					autoAnimation: true, // Whether to animate the text
+					duration: 4000 // Duration of the animation
 				}
-			],
+			]
 		);
-		
 	}, []);
 
-	return <div id="logo" className="z-20"></div>;
+	return <div id="logo"></div>;
 }
 
 export default VaraText;

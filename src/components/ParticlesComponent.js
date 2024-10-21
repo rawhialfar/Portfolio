@@ -16,27 +16,27 @@ const ParticlesComponent = memo((any) => {
 				enable: false,
 				zIndex: 0
 			},
-			// interactivity: {
-			// 	events: {
-			// 		onHover: {
-			// 			enable: true,
-			// 			mode: "repulse" // Particles move away from the mouse
-			// 		},
-			// 		onClick: {
-			// 			enable: true,
-			// 			mode: "push" // Add more particles on click
-			// 		},
-			// 		resize: true
-			// 	},
-			// 	modes: {
-			// 		repulse: {
-			// 			distance: 100 // How far particles move away from the mouse
-			// 		},
-			// 		push: {
-			// 			quantity: 3 // How many particles to add on click
-			// 		}
-			// 	}
-			// },
+			interactivity: {
+				events: {
+					onHover: {
+						enable: true,
+						mode: "repulse" // Particles move away from the mouse
+					},
+					onClick: {
+						enable: true,
+						mode: "push" // Add more particles on click
+					},
+					resize: true
+				},
+				modes: {
+					repulse: {
+						distance: 100 // How far particles move away from the mouse
+					},
+					push: {
+						quantity: 3 // How many particles to add on click
+					}
+				}
+			},
 			particles: {
 				number: {
 					value: 150, // Number of snowflakes
