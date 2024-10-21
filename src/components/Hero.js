@@ -9,11 +9,10 @@ import Navbar from "./Navbar";
 import ParticlesComponent from "./ParticlesComponent";
 
 const stringsToRender = [
-	"software engineer",
+	"engineer",
 	"developer",
 	"tester",
 	"programmer",
-	"passionate coder",
 	"tech enthusiast",
 	"student",
 	"traveller"
