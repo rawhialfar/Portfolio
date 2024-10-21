@@ -41,7 +41,7 @@ const Navbar = () => {
 
 				<div
 					id="logo"
-					className="hover:opacity-80 top-[20px] text-nowrap cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					className="hover:text-gray-400 hover:opacity-80 top-[20px] text-nowrap cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
 					onClick={() =>
 						document
 							.getElementById("hero")
@@ -109,19 +109,19 @@ const Navbar = () => {
 			<div className="relative z-50 hidden md:flex items-center space-x-4">
 				<a
 					href="https://www.linkedin.com/in/rawhi-alfar"
-					className="text-xl transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					className="hover:text-gray-400 text-xl transition-transform duration-300 ease-in-out hover:-translate-y-1"
 				>
 					<i className="bx bxl-linkedin"></i>
 				</a>
 				<a
 					href="https://github.com/rawhialfar"
-					className="text-xl transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					className="hover:text-gray-400 text-xl transition-transform duration-300 ease-in-out hover:-translate-y-1"
 				>
 					<i className="bx bxl-github"></i>
 				</a>
 				<a
 					href="mailto:alfarrawhi@gmail.com"
-					className="text-xl transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					className="hover:text-gray-400 text-xl transition-transform duration-300 ease-in-out hover:-translate-y-1"
 				>
 					<i className="bx bx-envelope"></i>
 				</a>

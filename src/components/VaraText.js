@@ -26,7 +26,7 @@ function VaraText() {
 	return (
 		<div
 			id="logo"
-			className="w-full max-h-20 max-w-[1200px] mx-auto ws-nowrap"
+			className="hover:text-gray-400 w-full max-h-20 max-w-[1200px] mx-auto ws-nowrap"
 			style={{ height: "200px", textAlign: "center", whiteSpace: "nowrap" }}
 		></div>
 	);
