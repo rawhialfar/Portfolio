@@ -69,7 +69,7 @@ const Hero = () => {
 						/>
 					</div>
 
-					<div className="w-full  text-start flex flex-col space-y-3 px-5">
+					<div className="w-full h-50 text-start flex flex-col space-y-3 px-5">
 						{/* Static Text */}
 						<h1 className="text-3xl mt-5 font-bold w-full text-center mb-[-15px]">
 							Hi, my name is Rawhi and I'm a
@@ -98,7 +98,7 @@ const Hero = () => {
 						smooth={true}
 						duration={500}
 						offset={-100}
-						className="scroll-mt-16 relative z-10 arrow-icon text-4xl xl:pt-[10rem] pt-[5rem] cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
+						className="scroll-mt-16 relative z-10 arrow-icon text-4xl xl:pt-[10rem] pt-[0rem] cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
 					>
 						<i className="bx bxs-chevron-down"></i>
 					</Link>

@@ -150,16 +150,67 @@ const Navbar = () => {
 					isOpen ? "block" : "hidden"
 				} md:hidden fixed top-16 left-0 w-full bg-gray-900 py-5 space-y-4 flex flex-col items-center z-50`}
 			>
-				<a href="#hero" className="text-xl hover:text-gray-400">
+				<a
+					onClick={(e) => {
+						e.preventDefault();
+						const element = document.getElementById("hero");
+						const yOffset = -100;
+						const y =
+							element.getBoundingClientRect().top +
+							window.pageYOffset +
+							yOffset;
+						window.scrollTo({ top: y, behavior: "smooth" });
+					}}
+					className="text-xl hover:text-gray-400"
+				>
 					Hero
 				</a>
-				<a href="#about" className="text-xl hover:text-gray-400">
+				<a
+					href="#about"
+					onClick={(e) => {
+						e.preventDefault();
+						const element = document.getElementById("about");
+						const yOffset = -100;
+						const y =
+							element.getBoundingClientRect().top +
+							window.pageYOffset +
+							yOffset;
+						window.scrollTo({ top: y, behavior: "smooth" });
+					}}
+					className="text-xl hover:text-gray-400"
+				>
 					About Me
 				</a>
-				<a href="#experience" className="text-xl hover:text-gray-400">
+				<a
+					href="#experience"
+					onClick={(e) => {
+						e.preventDefault();
+						const element = document.getElementById("experience");
+						const yOffset = -100;
+						const y =
+							element.getBoundingClientRect().top +
+							window.pageYOffset +
+							yOffset;
+						window.scrollTo({ top: y, behavior: "smooth" });
+					}}
+					className="text-xl hover:text-gray-400"
+				>
 					Experience
 				</a>
-				<a href="#projects" className="text-xl hover:text-gray-400">
+				<a
+					href="#projects"
+					onClick={(e) => {
+						e.preventDefault();
+						const element = document.getElementById("projects");
+						const yOffset = -100;
+						const y =
+							element.getBoundingClientRect().top +
+							window.pageYOffset +
+							yOffset;
+						window.scrollTo({ top: y, behavior: "smooth" });
+					}}
+					className="text-xl hover:text-gray-400"
+				>
 					Projects
 				</a>
 				<div className="flex items-center space-x-4">
