@@ -86,7 +86,7 @@ const Hero = () => {
 						to="about" // Ensure the About section has this id
 						smooth={true}
 						duration={500}
-						className="relative z-50 arrow-icon text-4xl lg:pt-10 cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
+						className="relative z-40 arrow-icon text-4xl lg:pt-10 cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
 					>
 						<i className="bx bxs-chevron-down"></i> {/* Arrow Icon */}
 					</Link>

@@ -25,7 +25,8 @@ module.exports = {
 			},
 			fontFamily: {
 				body: ['"Open Sans"', "sans-serif"],
-				heading: ['"Poppins"', "sans-serif"]
+				heading: ['"Poppins"', "sans-serif"],
+				mono: ["'Roboto Mono'", "monospace"]
 			},
 			fontSize: {
 				xs: ".75rem",
