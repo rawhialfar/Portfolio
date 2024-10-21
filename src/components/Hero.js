@@ -60,7 +60,7 @@ const Hero = () => {
 			<ParticlesComponent />
 
 			<section className="mt-[76px] sm:h-[calc(100vh-76px)] py-20  px-10 bg-gray-900 text-white flex items-start justify-center">
-				<div className="flex flex-col  justify-center items-center space-y-10 lg:space-y-0 ">
+				<div className="flex flex-col  justify-center items-center space-y-10  ">
 					<div className="static transform -translate-x-4/5 flex justify-center z-40">
 						<img
 							src={selfie}
@@ -98,7 +98,7 @@ const Hero = () => {
 						smooth={true}
 						duration={500}
 						offset={-100}
-						className="scroll-mt-16 relative z-10 arrow-icon text-4xl xl:pt-[10rem] pt-[0rem] cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
+						className="scroll-mt-16 relative z-10 arrow-icon text-4xl 2xl:pt-[5rem] pt-[0rem] cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
 					>
 						<i className="bx bxs-chevron-down"></i>
 					</Link>
