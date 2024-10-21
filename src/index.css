@@ -12,13 +12,9 @@ body {
 }
 #logo {
 	width: 100%; /* Make sure the container has enough width */
-	max-width: 1000px; /* Optional: Add a reasonable max width */
-	margin: 0 auto;
 	text-align: center;
 }
 #tsparticles {
-	overflow: hidden;
-	z-index: 250;
 	top: 0;
 	left: 0;
 	right: 0;

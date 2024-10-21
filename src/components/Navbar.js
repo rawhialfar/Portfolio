@@ -20,7 +20,7 @@ const Navbar = () => {
 
 				<div
 					id="logo"
-					className="hover:opacity-80 top-[10px] text-nowrap cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					className="hover:opacity-80 top-[20px] text-nowrap cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
 					onClick={() =>
 						document
 							.getElementById("hero")

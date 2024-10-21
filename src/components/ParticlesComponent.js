@@ -7,14 +7,12 @@ import { loadSnowPreset } from "@tsparticles/preset-snow";
 
 const ParticlesComponent = memo((any) => {
 	const [init, setInit] = useState(false);
-	const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 	const particlesOptions = useMemo(
 		() => ({
 			autoPlay: true,
 			fpsLimit: 140,
 			fullScreen: {
-				enable: false,
-				zIndex: 0
+				enable: false
 			},
 			interactivity: {
 				events: {
@@ -98,17 +96,7 @@ const ParticlesComponent = memo((any) => {
 		await loadFull(engine); // Ensures the engine is loaded once
 	};
 	const particlesLoaded = useCallback(async (container) => {}, []);
-	useEffect(() => {
-		const handleResize = () => {
-			setViewportHeight(window.innerHeight); // Set the viewport height dynamically
-		};
-		console.log("viewportHeight", viewportHeight);
-		window.addEventListener("resize", handleResize); // Listen for window resize
 
-		return () => {
-			window.removeEventListener("resize", handleResize); // Cleanup event listener
-		};
-	}, []);
 	// (async () => {
 	// 	await loadSnowPreset(tsParticles);
 	// 	await tsParticles.load({
@@ -119,18 +107,7 @@ const ParticlesComponent = memo((any) => {
 	// 	});
 	// })();
 	return (
-		<div
-			style={{
-				width: "100%",
-				height: "100vh", // Set height to 100vh to cover the Hero section
-				height: `919px`,
-				position: "absolute", // Ensure it's positioned correctly within the Hero section
-				top: 0, // Align with the top of the Hero section
-				left: 0,
-				zIndex: 10, // Make sure it stays behind other content
-				overflow: "hidden" // Prevent overflow issues
-			}}
-		>
+		<div className="w-full h-screen absolute top-0 left-0 z-10 overflow-hidden">
 			<Particles
 				id="tsparticles"
 				init={particlesInit}
