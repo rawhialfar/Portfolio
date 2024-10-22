@@ -194,7 +194,7 @@ const Projects = () => {
 									environment to make the user experience seamless and easy.
 								</li>
 								<li>
-									Maintaned using Continuos development strategies and refined
+									Maintaned with continuos development strategies and refined
 									code.
 								</li>
 							</ul>
