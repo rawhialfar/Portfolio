@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import VaraText from "./VaraText";
 
-function LogoWithHoverEffect() {
+function LogoWithHoverEffect(text) {
 	const [renderCount, setRenderCount] = useState(0); // State to trigger re-render
 
 	const handleMouseEnter = () => {
@@ -12,7 +12,8 @@ function LogoWithHoverEffect() {
 		<div
 			onMouseEnter={handleMouseEnter} // Trigger re-render on hover
 		>
-			<VaraText key={renderCount} /> {/* Re-render VaraText based on key */}
+			<VaraText key={renderCount} text={text} />{" "}
+			{/* Re-render VaraText based on key */}
 		</div>
 	);
 }

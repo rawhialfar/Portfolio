@@ -1,9 +1,8 @@
 import { useCallback, useEffect, useState, useMemo, memo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import { loadFull } from "tsparticles";
 import { loadSlim } from "@tsparticles/slim";
-import { loadSnowPreset } from "@tsparticles/preset-snow";
 
 const ParticlesComponent = memo((any) => {
 	const [init, setInit] = useState(false);
@@ -18,61 +17,60 @@ const ParticlesComponent = memo((any) => {
 				events: {
 					onHover: {
 						enable: true,
-						mode: "repulse" // Particles move away from the mouse
+						mode: "repulse"
 					},
 					onClick: {
-						enable: true,
-						mode: "push" // Add more particles on click
+						enable: false,
+						mode: "push"
 					},
 					resize: true
 				},
 				modes: {
 					repulse: {
-						distance: 100 // How far particles move away from the mouse
+						distance: 100
 					},
 					push: {
-						quantity: 3 // How many particles to add on click
+						quantity: 3
 					}
 				}
 			},
 			particles: {
 				number: {
-					value: 150, // Number of snowflakes
+					value: 150,
 					density: {
 						enable: true,
-						area: 800 // How tightly packed the snowflakes are
+						area: 800
+					}
+				},
+				links: {
+					color: "#ffffff",
+					distance: 150,
+					width: 1,
+					enable: true,
+					shadow: {
+						enable: true
 					}
 				},
 				color: {
-					value: "#ffffff" // Snowflake color
+					value: "#ffffff"
 				},
 				shape: {
-					type: "circle" // Snowflakes are round
+					type: "circle"
 				},
 				opacity: {
-					value: 0.8, // Opacity of snowflakes
-					random: true // Make opacity random for a more natural effect
+					value: 0.8,
+					random: true
 				},
 				size: {
-					value: { min: 2, max: 5 }, // Size of snowflakes
-					random: true // Random size for variety
+					value: { min: 2, max: 5 },
+					random: true
 				},
 				move: {
 					enable: true,
-					speed: 1, // Speed at which snowflakes fall
-					direction: "bottom", // Make the snowflakes fall down
+					speed: 1,
+					direction: "bottom",
 					outModes: {
-						default: "out" // Make them disappear when they reach the bottom
-					}
-				}
-			},
-			interactivity: {
-				events: {
-					onHover: {
-						enable: false // Disable interaction to keep it simple
-					},
-					onClick: {
-						enable: false // No additional particles on click
+						default: "out"
 					}
 				}
 			},
@@ -107,7 +105,7 @@ const ParticlesComponent = memo((any) => {
 	// 	});
 	// })();
 	return (
-		<div className="w-full sm:h-screen xsxs:h-[58.5rem] h-[66.5rem] absolute top-0 left-0 z-10 overflow-hidden">
+		<div className="w-full sm:h-screen xsxs:h-[49rem] h-[66.5rem] absolute top-0 left-0 z-10 overflow-hidden">
 			<Particles
 				id="tsparticles"
 				init={particlesInit}

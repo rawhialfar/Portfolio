@@ -32,7 +32,7 @@ const Navbar = () => {
 	return (
 		<nav
 			className={`flex h-20 justify-between items-center py-5 px-10 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-				isScrolled ? "bg-gray-900" : "bg-transparent"
+				isScrolled ? "bg-gray-900 bg-opacity-40" : "bg-transparent"
 			}`}
 		>
 			{/* <Font family="Mr De Haviland" onAllLoad={() => console.log("all loaded")}> */}
@@ -41,14 +41,15 @@ const Navbar = () => {
 
 				<div
 					id="logo"
-					className="hover:text-gray-400 hover:opacity-80 top-[20px] text-nowrap cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					className="hover:text-gray-400  w-full max-h-20 max-w-[1200px] mx-auto ws-nowrap hover:opacity-80 top-[20px] text-nowrap cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					style={{ height: "200px", textAlign: "center", whiteSpace: "nowrap" }}
 					onClick={() =>
 						document
 							.getElementById("hero")
 							.scrollIntoView({ behavior: "smooth" })
 					}
 				>
-					<Logo />
+					<Logo text="Rawhi Alfar" />
 				</div>
 			</Font>
 

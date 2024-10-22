@@ -9,22 +9,18 @@ import Navbar from "./Navbar";
 import ParticlesComponent from "./ParticlesComponent";
 
 const stringsToRender = [
-	"engineer",
 	"developer",
+	"QA Engineer",
 	"tester",
 	"programmer",
-	"tech enthusiast",
-	"student",
-	"traveller"
+	"student"
 ];
 
 const colors = [
-	"#ff0000", // red
-	"#ff7f00", // orange
-	"#ffff00", // yellow
-	"#00ff00", // green
-	"#0060ff", // blue
-	"#8b00ff" // violet
+	"#0066ff", // Bright blue
+	"#3399ff", // Light blue
+	"#66ccff", // Lighter blue
+	"#99ccff" // Very light blue
 ];
 
 const Hero = () => {
@@ -58,50 +54,70 @@ const Hero = () => {
 			<Navbar />
 			<ParticlesComponent />
 
-			<section className="mt-[76px] sm:h-[calc(100vh-76px)] py-20  px-10 bg-gray-900 text-white flex items-start justify-center">
-				<div className="flex flex-col  justify-center items-center space-y-10  ">
-					<div className="static transform -translate-x-4/5 flex justify-center z-40">
+			<section className="mt-[76px] flex-col justify-center items-center sm:h-[calc(100vh-76px)] py-20  px-10 bg-gray-900 text-white flex">
+				<div className="flex md:flex-row flex-col justify-center md:m-[6rem] lg:ml-[20rem] items-center">
+					<div
+						id="blob-container"
+						className="relative z-20 flex md:w-[700px] h-[400px] w-full overflow-hidden border-2 border-gray-200 -mt-8" // Added negative top margin
+					>
 						<img
-							src={selfie}
+							src={selfie} // Use your image path here
 							alt="Picture of me"
-							className="w-[400px] rounded-lg shadow-xl h-[400px] object-cover"
+							className="absolute w-full h-full object-cover repulse-effect"
 						/>
 					</div>
 
-					<div className="w-full h-50 text-start flex flex-col space-y-3 px-5">
+					<div className="w-full z-20 md:ml-[30rem] flex flex-col gap-2 justify-center items-center md:space-y-1 px-2 md:min-h-screen md:items-start md:text-left text-center">
+						<hr className="md:hidden" />
+
 						{/* Static Text */}
-						<h1 className="text-3xl mt-5 font-bold w-full text-center mb-[-15px]">
-							Hi, my name is Rawhi and I'm a
-						</h1>
-						{/* <div class="text-container">
-						<h1>Rawhi Alfar</h1>
-					</div> */}
-						{/* Dynamic Typed Text */}
-						<h2
-							className=" text-3xl font-bold w-full text-center"
-							style={{
-								color: colors[colorIndex],
-								transition: "color 2s ease"
-							}}
+						<h1
+							id="Hello"
+							className="md:text-[12vh] md:mr-8 text-4xl flex justify-center md:justify-start"
 						>
-							<ReactTyped
-								strings={stringsToRender}
-								typeSpeed={90}
-								backSpeed={90}
-								loop
-							/>
-						</h2>
+							Hello{" "}
+							<span role="img" aria-label="wave">
+								👋
+							</span>
+						</h1>
+
+						<div>
+							<div className="absolute md:border-l-4 border-gray-300 h-[100px]"></div>
+
+							<h2 className="md:text-3xl md:ml-5 mr-5 text-2xl w-full flex font-semibold justify-center md:justify-start">
+								My name is Rawhi Alfar
+							</h2>
+
+							<h3 className="md:text-3xl md:ml-5 mr-5 text-2xl flex justify-center md:justify-start">
+								I'm a{" "}
+								<span
+									className="ml-[8px] text-gradient font-bold"
+									style={{
+										color: colors[colorIndex],
+										transition: "color 2s ease"
+									}}
+								>
+									<ReactTyped
+										strings={stringsToRender}
+										typeSpeed={100}
+										backSpeed={100}
+										loop
+									/>
+								</span>
+							</h3>
+						</div>
 					</div>
-					<Link
-						to="about"
-						smooth={true}
-						duration={500}
-						offset={-100}
-						className="scroll-mt-16 relative z-10 arrow-icon text-4xl 2xl:pt-[5rem] pt-[0rem] cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
-					>
-						<i className="bx bxs-chevron-down"></i>
-					</Link>
 				</div>
+
+				<Link
+					to="about"
+					smooth={true}
+					duration={500}
+					offset={-100}
+					className="scroll-mt-16 absolute md:bottom-0 bottom-12 left-1/2 -translate-x-1/2 z-10 arrow-icon text-4xl 2xl:pt-[5rem] cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
+				>
+					<i className="bx bxs-chevron-down"></i>
+				</Link>
 			</section>
 		</section>
 	);
