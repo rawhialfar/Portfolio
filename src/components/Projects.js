@@ -3,6 +3,7 @@ import webserver from "../assets/img/Webserver.png";
 import CourseManager from "../assets/img/CourseManager.png";
 import CourseTable from "../assets/img/CourseTable.png";
 import WeatherApp from "../assets/img/WeatherApp.png";
+import StockPortfolio from "../assets/img/StockPortfolio.png";
 
 const Projects = () => {
 	const [expandedCard, setExpandedCard] = useState(null); // Tracks the expanded card
@@ -169,6 +170,52 @@ const Projects = () => {
 							src={WeatherApp}
 							alt="Weather App"
 							className="object-cover rounded-lg md:w-[40%] h-auto self-center"
+						/>
+					</div>
+				</div>
+				{/* {Stock Portofolio} */}
+				<div className="bg-gray-700 p-6 md:w-5/6 rounded-lg shadow-lg flex md:flex-row flex-col justify-between">
+					{/* Left Section - Text */}
+					<div className="md:flex-col w-full md:w-1/2">
+						<div className="flex-col w-full md:w-[60%]">
+							<h3 className="text-3xl font-semibold mb-2 items-start">
+								Stock Portofolio
+							</h3>
+							<h4 className="text-xl mb-4 italic text-gray-300">Java</h4>
+						</div>
+						<div className="w-full flex flex-col justify-center">
+							<ul className="list-disc ml-8 text-xl">
+								<li>
+									Developed a stock portofolio software that allows a user to
+									buy, sell, update and gain stocks/mutual funds.
+								</li>
+								<li>
+									Built using a Java swing application that utilized a GUI
+									environment to make the user experience seamless and easy.
+								</li>
+								<li>
+									Maintaned using Continuos development strategies and refined
+									code.
+								</li>
+							</ul>
+						</div>
+						<div className="flex gap-4 pt-10 pb-10">
+							<a
+								href="https://github.com/rawhialfar/ePortfolio"
+								className="inline-block bg-gray-600 py-2 px-4 rounded-lg hover:bg-gray-500"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								View On Github
+							</a>
+						</div>
+					</div>
+					{/* Right Section - Image */}
+					<div className="w-full md:w-1/2 flex justify-end items-end">
+						<img
+							src={StockPortfolio}
+							alt="Stock Portfolio"
+							className="object-cover rounded-lg md:w-[70%] h-auto self-center"
 						/>
 					</div>
 				</div>
