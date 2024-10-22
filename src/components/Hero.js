@@ -10,10 +10,9 @@ import ParticlesComponent from "./ParticlesComponent";
 
 const stringsToRender = [
 	"developer",
-	"QA Engineer",
-	"tester",
-	"programmer",
-	"student"
+	"quality engineer",
+	"passionate programmer",
+	"tech enthusiast"
 ];
 
 const colors = [
