@@ -49,7 +49,7 @@ const Navbar = () => {
 							.scrollIntoView({ behavior: "smooth" })
 					}
 				>
-					<Logo text="Rawhi Alfar" />
+					<Logo />
 				</div>
 			</Font>
 
