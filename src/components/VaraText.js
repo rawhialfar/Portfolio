@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Vara from "vara";
 
 function VaraText() {
-	const text = "Rawhi AlFar";
+	const text = "Rawhi Alfar";
 	const text2 = "Hello";
 	// console.log(text.text.text);
 
