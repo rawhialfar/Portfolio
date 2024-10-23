@@ -10,7 +10,7 @@ const AboutMe = () => {
 			<div className="sm:w-full w-[140%] text-center space-y-5 ">
 				<p className="text-xl mx-auto">
 					I'm a passionate Software Engineering student enrolled in the
-					Bachelor's of Computing Program (co-op) at the University of Guelph.
+					Bachelor of Computing Program (co-op) at the University of Guelph.
 					My journey in programming began in high school, where I found a love
 					for coding and made lasting connections through the programming club.
 					That experience inspired me to pursue software engineering as my
