@@ -105,7 +105,7 @@ const ParticlesComponent = memo((any) => {
 	// 	});
 	// })();
 	return (
-		<div className="w-full sm:h-screen xsxs:h-[690px] h-[66.5rem] absolute top-0 left-0 z-10 overflow-hidden">
+		<div className="w-full sm:h-screen xsxs:h-[900px] h-[66.5rem] absolute top-0 left-0 z-10 overflow-hidden">
 			<Particles
 				id="tsparticles"
 				init={particlesInit}
