@@ -117,12 +117,12 @@ const Projects = () => {
 							<img
 								src={CourseManager}
 								alt="Course Manager"
-								className="object-cover rounded-lg w-[70%] mb-4 self-end"
+								className="object-cover rounded-lg md:w-[70%] w-full mb-4 self-end"
 							/>
 							<img
 								src={CourseTable}
 								alt="Course Table"
-								className="object-cover rounded-lg w-[70%] mb-4 self-end"
+								className="object-cover rounded-lg md:w-[70%] w-full mb-4 self-end"
 							/>
 						</div>
 					</div>

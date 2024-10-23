@@ -137,7 +137,7 @@ const Navbar = () => {
 			</div>
 
 			{/* Hamburger Icon for mobile */}
-			<div className="md:hidden right-0 fixed p-2">
+			<div className="md:hidden right-0 fixed p-2 mr-4">
 				<button onClick={toggleMenu} className="text-white focus:outline-none">
 					<i
 						className={isOpen ? "bx bx-x text-3xl" : "bx bx-menu text-3xl"}

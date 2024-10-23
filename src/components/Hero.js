@@ -54,10 +54,10 @@ const Hero = () => {
 			<ParticlesComponent />
 
 			<section className="mt-[76px] flex-col justify-center items-center sm:h-[calc(100vh-76px)] py-20  px-10 bg-gray-900 text-white flex">
-				<div className="flex md:flex-row flex-col justify-center md:m-[6rem] lg:ml-[20rem] items-center">
+				<div className="flex md:flex-row flex-col justify-between md:m-[6rem] lg:ml-[20rem] items-center lg:gap-x-[10rem] gap-x-[5rem] 3xl:gap-x-[37rem]">
 					<div
 						id="blobbers"
-						className="relative z-20 flex 3xl:w-[700px] h-[400px] w-full overflow-hidden border-2 border-gray-200 -mt-8" // Added negative top margin
+						className="relative z-20 flex 2xl:w-[700px] 2xl:h-[400px] h-[300px] w-[300px] md:w-[400px] overflow-hidden border-2 border-gray-200 -mt-8" // Added negative top margin
 					>
 						<img
 							src={selfie} // Use your image path here
@@ -66,13 +66,13 @@ const Hero = () => {
 						/>
 					</div>
 
-					<div className="w-full z-20 md:ml-[30rem] flex flex-col gap-2 justify-center items-center md:space-y-1 px-2 md:min-h-screen md:items-start md:text-left text-center">
+					<div className="w-full z-20 flex flex-col gap-2 justify-center items-center md:space-y-1 px-2  md:items-start md:text-left text-center">
 						<hr className="md:hidden" />
 
 						{/* Static Text */}
 						<h1
 							id="Hello"
-							className="md:text-[12vh] md:mr-8 text-4xl flex justify-center md:justify-start"
+							className="md:text-[10vh] md:mr-8 text-4xl flex justify-center md:justify-start"
 						>
 							Hello{" "}
 							<span role="img" aria-label="wave">
