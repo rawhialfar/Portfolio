@@ -16,11 +16,11 @@ const ParticlesComponent = memo((any) => {
 			interactivity: {
 				events: {
 					onHover: {
-						enable: false,
+						enable: true,
 						mode: "repulse"
 					},
 					onClick: {
-						enable: true,
+						enable: false,
 						mode: "push" // Pull particles towards the click point to create a connection effect
 					},
 					resize: true
@@ -28,7 +28,7 @@ const ParticlesComponent = memo((any) => {
 				modes: {
 					repulse: {
 						distance: 100,
-						duration: 0.4
+						duration: 1
 					},
 					push: {
 						quantity: 1 // Adds a few particles on click for network effect
@@ -52,7 +52,7 @@ const ParticlesComponent = memo((any) => {
 			},
 			particles: {
 				number: {
-					value: 60,
+					value: 100,
 					density: {
 						enable: true,
 						area: 500
@@ -60,8 +60,8 @@ const ParticlesComponent = memo((any) => {
 				},
 				links: {
 					color: "#ffffff",
-					distance: 300,
-					width: 2,
+					distance: 200,
+					width: 1,
 					opacity: 1.2,
 					enable: true,
 					shadow: {
@@ -79,12 +79,12 @@ const ParticlesComponent = memo((any) => {
 					random: true
 				},
 				size: {
-					value: { min: 5, max: 8 },
+					value: { min: 2, max: 5 },
 					random: true
 				},
 				move: {
 					enable: true,
-					speed: 1.3,
+					speed: 1.5,
 					direction: "none",
 					outModes: {
 						default: "out"

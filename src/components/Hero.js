@@ -112,7 +112,7 @@ const Hero = () => {
 						offset={-50}
 						className="scroll-mt-16 md:absolute bottom-0 relative md:mt-0 mt-[50px] md:left-1/2 left-5 -translate-x-1/2 z-10 arrow-icon text-4xl 2xl:pt-[5rem] cursor-pointer"
 					>
-						<i className="bx bxs-chevron-down animate-jump text-4xl opacity-100 hover:opacity-70"></i>
+						<i className="bx bxs-chevron-down animate-jump animate-jump-hover text-4xl opacity-100 hover:opacity-70"></i>
 					</Link>
 				</div>
 			</section>

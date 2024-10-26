@@ -19,9 +19,15 @@
 		transform: translateY(-10px);
 	}
 }
+
 .animate-jump {
-	animation: jump 1s ease-in-out infinite; /* 1s duration, smooth easing, infinite loop */
+	animation: jump 1s ease-in-out infinite;
 }
+
+.animate-jump-hover:hover {
+	animation-play-state: paused; /* Pauses the animation on hover */
+}
+
 .bg-gradient-opacity-100 {
 	background: linear-gradient(
 		to right,
