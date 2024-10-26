@@ -47,7 +47,7 @@ const Hero = () => {
 	}, []);
 	return (
 		<section id="hero">
-			<div className="fixed top-0 left-0 w-full h-20  from-gray-900 via-gray-800 to-gray-900 z-0">
+			<div className="fixed top-20 left-0 w-full h-20  from-gray-900 via-gray-800 to-gray-900 z-0">
 				{/* Transparent banner background */}
 			</div>
 			<Navbar />
