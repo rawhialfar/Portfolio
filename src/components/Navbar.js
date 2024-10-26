@@ -153,7 +153,7 @@ const Navbar = () => {
 			<div
 				className={`${
 					isOpen ? "block" : "hidden"
-				} lg:hidden fixed top-20 left-0 w-full bg-gray-900 py-5 space-y-4 flex flex-col items-center z-50`}
+				} lg:hidden fixed top-20 left-0 w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900  py-5 space-y-4 flex flex-col items-center z-50`}
 			>
 				<a
 					href="#about"
