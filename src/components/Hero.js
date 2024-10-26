@@ -47,6 +47,9 @@ const Hero = () => {
 	}, []);
 	return (
 		<section id="hero">
+			<div className="fixed top-0 left-0 w-full h-20  from-gray-900 via-gray-800 to-gray-900 z-0">
+				{/* Transparent banner background */}
+			</div>
 			<Navbar />
 			<ParticlesComponent />
 
@@ -56,7 +59,7 @@ const Hero = () => {
 				<div className="flex md:flex-row flex-col justify-between md:m-[6rem] lg:ml-[20rem] items-center lg:gap-x-[10rem] gap-x-[5rem] 3xl:gap-x-[37rem]">
 					<div
 						id="blobbers"
-						className="relative z-20 flex 2xl:w-[700px] 2xl:h-[400px] h-[300px] w-[300px] md:w-[400px] overflow-hidden border-2 border-gray-200 -mt-8" // Added negative top margin
+						className="relative z-20 flex 2xl:w-[700px] 2xl:h-[400px] h-[300px] md:w-[400px] w-3/4 overflow-hidden border-2 border-gray-200 -mt-8" // Added negative top margin
 					>
 						<img
 							src={selfie} // Use your image path here

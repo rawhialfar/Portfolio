@@ -45,8 +45,8 @@ const Navbar = () => {
 			<Font>
 				<div
 					id="logo"
-					className="hover:text-gray-400  w-full max-h-20 max-w-[1200px] mx-auto ws-nowrap hover:opacity-80 top-[17px] text-nowrap cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
-					style={{ height: "200px", textAlign: "center", whiteSpace: "nowrap" }}
+					className="hover:text-gray-400  w-full max-h-20 max-w-[1200px] mx-auto ws-nowrap hover:opacity-80 top-[17px] cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					style={{ height: "200px" }}
 					onClick={() =>
 						document
 							.getElementById("hero")

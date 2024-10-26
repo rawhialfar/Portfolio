@@ -8,7 +8,9 @@ const Experience = () => {
 			id="experience"
 			className=" flex flex-col items-center justify-center py-10 px-10 bg-gray-800 text-white"
 		>
-			<h2 className="text-4xl font-bold mb-8 text-center">Experience</h2>
+			<h2 className="text-4xl font-bold mb-8 text-center self-center">
+				Experience
+			</h2>
 			<div className="space-y-8">
 				<div className="md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl">
 					<div className="bg-gray-700 p-6 rounded-lg shadow-lg md:flex-row flex-col flex justify-between mt-5">
