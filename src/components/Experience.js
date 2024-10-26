@@ -47,6 +47,11 @@ const Experience = () => {
 									to manage SaaS data, support new features and enhance
 									performance.
 								</li>
+								<li>
+									Wrote backend workflow scripts in Deluge to automate actions
+									and module creation in Zoho CRM, significantly reducing time
+									and resources spent on client onboarding and data entry
+								</li>
 							</ul>
 						</div>
 						<img

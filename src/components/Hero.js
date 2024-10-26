@@ -47,13 +47,12 @@ const Hero = () => {
 	}, []);
 	return (
 		<section id="hero">
-			<div className="fixed top-0 left-0 w-full h-20 bg-gray-900 z-0">
-				{/* Transparent banner background */}
-			</div>
 			<Navbar />
 			<ParticlesComponent />
 
-			<section className="mt-[76px] flex-col justify-center items-center sm:h-[calc(100vh-76px)] py-20  px-10 bg-gray-900 text-white flex">
+			<section
+				className={`h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white`}
+			>
 				<div className="flex md:flex-row flex-col justify-between md:m-[6rem] lg:ml-[20rem] items-center lg:gap-x-[10rem] gap-x-[5rem] 3xl:gap-x-[37rem]">
 					<div
 						id="blobbers"
@@ -109,12 +108,11 @@ const Hero = () => {
 
 					<Link
 						to="about"
-						smooth={true}
 						duration={500}
-						offset={-100}
-						className="scroll-mt-16 md:absolute bottom-0 relative md:mt-0 mt-[50px] md:left-1/2 left-5 -translate-x-1/2 z-10 arrow-icon text-4xl 2xl:pt-[5rem] cursor-pointer transition-transform duration-300 ease-in-out hover:translate-y-2 hover:opacity-75"
+						offset={-50}
+						className="scroll-mt-16 md:absolute bottom-0 relative md:mt-0 mt-[50px] md:left-1/2 left-5 -translate-x-1/2 z-10 arrow-icon text-4xl 2xl:pt-[5rem] cursor-pointer"
 					>
-						<i className="bx bxs-chevron-down"></i>
+						<i className="bx bxs-chevron-down animate-jump text-4xl opacity-100 hover:opacity-70"></i>
 					</Link>
 				</div>
 			</section>

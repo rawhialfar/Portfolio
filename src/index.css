@@ -10,6 +10,50 @@
 	border-radius: 40% 60% 70% 30% / 40% 50% 60% 30%;
 	animation: morph 13s ease-in-out infinite;
 }
+@keyframes jump {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+.animate-jump {
+	animation: jump 1s ease-in-out infinite; /* 1s duration, smooth easing, infinite loop */
+}
+.bg-gradient-opacity-100 {
+	background: linear-gradient(
+		to right,
+		rgb(17 24 39 / 1),
+		rgb(31 41 55 / 1),
+		rgb(17 24 39 / 1)
+	);
+}
+
+.bg-gradient-opacity-50 {
+	background: linear-gradient(
+		to right,
+		rgb(17 24 39 / 0.5),
+		rgb(31 41 55 / 0.5),
+		rgb(17 24 39 / 0.5)
+	);
+}
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in {
+	opacity: 0;
+	animation: fadeInUp 1s ease-in-out forwards;
+}
 
 @keyframes morph {
 	0% {
