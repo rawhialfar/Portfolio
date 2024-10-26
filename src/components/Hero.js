@@ -54,7 +54,7 @@ const Hero = () => {
 			<ParticlesComponent />
 
 			<section
-				className={`h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white`}
+				className={`h-screen top-20 flex items-center justify-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white`}
 			>
 				<div className="flex md:flex-row flex-col justify-between md:m-[6rem] lg:ml-[20rem] items-center lg:gap-x-[10rem] gap-x-[5rem] 3xl:gap-x-[37rem]">
 					<div
