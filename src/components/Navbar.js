@@ -50,26 +50,24 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`flex h-20 lg:navbar-blur text-shadow-lg justify-between items-center py-5 lg:px-10  px-10 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out 
+			className={`flex h-20 gradient-transition  text-shadow-lg justify-between items-center py-5 px-10 fixed top-0 left-0 right-0 z-50 transition-all duration-10000 ease-in-out
     		${
-					isScrolled
-						? windowScroll > 800
-							? isDarkMode
-								? " bg-gradient-opacity-50-dark"
-								: "bg-gradient-opacity-50-light"
-							: ` ${
-									isDarkMode
-										? "bg-gradient-opacity-50-dark"
-										: "bg-gradient-opacity-50-light"
-							  }`
-						: "bg-transparent"
+					windowScroll > 900
+						? isDarkMode
+							? "bg-gradient-opacity-100-dark"
+							: "bg-gradient-opacity-100-light"
+						: ` ${
+								isDarkMode
+									? "bg-gradient-opacity-50-dark"
+									: "bg-gradient-opacity-50-light"
+						  }`
 				} ${isDarkMode ? "dark-theme" : "light-theme"} `}
 		>
-			<div className="flex flex-row h-full w-full justify-between navbar-blur">
+			<div className="flex flex-row h-full w-full justify-between">
 				<Font>
 					<div
 						id="logo"
-						className="hover:text-gray-400 text-shadow xss:ml-0 ml-[-20px] xss:w-full top-[-20px] w-[160%] max-h-20 mx-auto ws-nowrap hover:opacity-80  cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
+						className="hover:text-gray-400 text-shadow xss:ml-0 ml-[-20px] xss:w-full top-[0px] w-[160%] max-h-20 mx-auto ws-nowrap hover:opacity-80  cursor-pointer  flex relative transition-transform duration-300 ease-in-out hover:-translate-y-1"
 						style={{
 							height: "200px",
 							textAlign: "center",
@@ -86,7 +84,7 @@ const Navbar = () => {
 				</Font>
 
 				{/* Menu for larger screens */}
-				<div className="relative hidden lg:flex space-x-8 top-[-10px] ml-[-8rem] text-lg font-semibold">
+				<div className="relative hidden lg:flex space-x-8 top-[10px] ml-[-8rem] text-lg font-semibold">
 					<a
 						href="#about"
 						onClick={(e) => {
@@ -202,7 +200,7 @@ const Navbar = () => {
 				</div>
 
 				{/* Hamburger Icon for mobile */}
-				<div className="lg:hidden right-0 fixed bottom-3 p-2 mr-[-20px]">
+				<div className="lg:hidden right-0 fixed  p-2 mr-[10px]">
 					<button
 						onClick={toggleMenu}
 						className={`focus:outline-none ${
@@ -229,12 +227,16 @@ const Navbar = () => {
 			<div
 				className={`${
 					isOpen ? "block" : "hidden"
-				} lg:hidden fixed top-[80px] left-0 w-full backdrop-blur-[4px] ${
-					isScrolled
+				} lg:hidden fixed top-[80px] left-0 w-full ] ${
+					windowScroll > 800
 						? isDarkMode
-							? "bg-gradient-opacity-50-dark"
-							: "bg-gradient-opacity-50-light"
-						: "bg-transparent"
+							? "bg-gradient-opacity-100-dark"
+							: "bg-gradient-opacity-100-light"
+						: ` ${
+								isDarkMode
+									? "bg-gradient-opacity-50-dark"
+									: "bg-gradient-opacity-50-light"
+						  }`
 				} ${
 					isDarkMode ? "dark-theme" : "light-theme"
 				}  py-5 space-y-4 flex flex-col items-center z-40`}

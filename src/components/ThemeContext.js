@@ -5,17 +5,17 @@ export const ThemeContext = createContext();
 
 // Create a provider component
 export const ThemeProvider = ({ children }) => {
+	// Check if dark mode is saved in localStorage; default to true if not
 	const [isDarkMode, setIsDarkMode] = useState(() => {
-		// Retrieve the mode from localStorage if available
 		const savedMode = localStorage.getItem("darkMode");
-		return savedMode ? JSON.parse(savedMode) : false;
+		return savedMode ? JSON.parse(savedMode) : true;
 	});
 
+	// Toggle function to switch between dark and light mode
 	const toggleDarkMode = () => {
 		setIsDarkMode((prevMode) => {
 			const newMode = !prevMode;
-			// Save the mode in localStorage
-			localStorage.setItem("darkMode", JSON.stringify(newMode));
+			localStorage.setItem("darkMode", JSON.stringify(newMode)); // Save mode to localStorage
 			return newMode;
 		});
 	};

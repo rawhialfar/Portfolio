@@ -48,10 +48,10 @@ const Hero = () => {
 
 	return (
 		<section id="hero">
-			<div className="fixed top-0 left-0 w-[0%] h-20 z-0 navbar-blur">
+			<div className="fixed top-0 left-0 w-[0%] h-20 z-20 bg-gradient-to-r from-[#1474f7] to-[#8000ff]">
 				{/* Transparent banner background */}
+				<Navbar />
 			</div>
-			<Navbar />
 			<ParticlesComponent />
 
 			<section
