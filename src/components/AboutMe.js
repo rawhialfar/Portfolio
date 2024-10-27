@@ -1,8 +1,11 @@
 import React from "react";
 import ParticlesComponent from "./ParticlesComponent";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
+
 const AboutMe = () => {
 	const sectionRef = useRef(null);
+	const { isDarkMode } = useContext(ThemeContext);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -28,11 +31,15 @@ const AboutMe = () => {
 		<section
 			id="about"
 			ref={sectionRef}
-			className="bg-gray-800 z-[-1] pb-10 pt-10 text-white flex flex-col items-center justify-center overflow-x-hidden fade-in"
+			className={`z-[-1] pb-10 pt-10 text-white flex flex-col items-center justify-center overflow-x-hidden fade-in ${
+				isDarkMode ? "dark-theme" : "light-theme"
+			}`}
 		>
-			<h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
+			<h2 className="xs:text-4xl text-[200%] font-bold mb-8 text-center">
+				About Me
+			</h2>
 			<div className="sm:w-full w-[140%] text-center space-y-5">
-				<p className="text-xl mx-auto">
+				<p className="xs:text-xl text-[17px] mx-auto">
 					I'm a passionate Software Engineering student enrolled in the Bachelor
 					of Computing Program (co-op) at the University of Guelph. My journey
 					in programming began in high school, where I found a love for coding

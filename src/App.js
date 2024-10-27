@@ -5,6 +5,7 @@ import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import ParticlesComponent from "./components/ParticlesComponent";
+import { ThemeProvider } from "./components/ThemeContext"; // Adjust the path accordingly
 /**
  * The main app component, which is the topmost component and is responsible for rendering all other components.
  *
@@ -20,14 +21,14 @@ import ParticlesComponent from "./components/ParticlesComponent";
  */
 function App() {
 	return (
-		<div>
+		<ThemeProvider>
 			<Hero />
 			<AboutMe />
 			{/* <Skills /> */}
 			<Experience />
 			<Projects />
 			{/* <Contact /> */}
-		</div>
+		</ThemeProvider>
 	);
 }
 

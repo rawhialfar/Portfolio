@@ -1,11 +1,20 @@
-import { useCallback, useEffect, useState, useMemo, memo } from "react";
+import {
+	useCallback,
+	useEffect,
+	useState,
+	useMemo,
+	memo,
+	useContext
+} from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-// import { loadAll } from "tsparticles"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 import { loadFull } from "tsparticles";
-import { loadSlim } from "@tsparticles/slim";
+import { ThemeContext } from "./ThemeContext";
 
 const ParticlesComponent = memo((any) => {
 	const [init, setInit] = useState(false);
+	const { isDarkMode } = useContext(ThemeContext);
+
+	// Dynamically update particles options when isDarkMode changes
 	const particlesOptions = useMemo(
 		() => ({
 			autoPlay: true,
@@ -40,7 +49,6 @@ const ParticlesComponent = memo((any) => {
 							color: "#3395ff",
 							opacity: 1, // Set initial opacity to max for clear visibility
 							animate: {
-								// Add animation for pulsing effect
 								enable: true,
 								speed: 1, // Speed of the pulsing effect
 								opacity_min: 0.3, // Minimum opacity for the pulse
@@ -59,17 +67,17 @@ const ParticlesComponent = memo((any) => {
 					}
 				},
 				links: {
-					color: "#ffffff",
+					color: isDarkMode ? "#ffffff" : "#333333", // Change color based on the theme
 					distance: 200,
 					width: 1,
 					opacity: 1.2,
 					enable: true,
 					shadow: {
-						enable: true
+						enable: isDarkMode // Shadow enabled in dark mode
 					}
 				},
 				color: {
-					value: "#ffffff"
+					value: isDarkMode ? "#ffffff" : "#333333" // Change particle color based on the theme
 				},
 				shape: {
 					type: "circle"
@@ -93,15 +101,12 @@ const ParticlesComponent = memo((any) => {
 			},
 			detectRetina: true // Adjust for Retina displays
 		}),
-		[]
+		[isDarkMode] // Dynamically update when isDarkMode changes
 	);
 
 	useEffect(() => {
 		initParticlesEngine(async (engine) => {
-			// await loadAll(engine);
 			await loadFull(engine);
-			// await loadSlim(engine);
-			//await loadBasic(engine);
 		}).then(() => {
 			setInit(true);
 		});
@@ -110,42 +115,17 @@ const ParticlesComponent = memo((any) => {
 	const particlesInit = async (engine) => {
 		await loadFull(engine); // Ensures the engine is loaded once
 	};
-	const particlesLoaded = useCallback(async (container) => {}, []);
-	const [clickCount, setClickCount] = useState(0);
-	const handleParticlesClick = useCallback(
-		(e) => {
-			console.log(clickCount);
 
-			if (clickCount < clickLimit) {
-				setClickCount((prevCount) => prevCount + 1);
-			} else {
-				// Disable click event mode when limit is reached
-				e.container.interactivity.events.onClick.enable = false;
-			}
-		},
-		[clickCount]
-	);
-	// (async () => {
-	// 	await loadSnowPreset(tsParticles);
-	// 	await tsParticles.load({
-	// 		id: "tsparticles",
-	// 		options: {
-	// 			preset: "snow"
-	// 		}
-	// 	});
-	// })();
+	const particlesLoaded = useCallback(async (container) => {}, []);
+
 	return (
-		<div className="w-full sm:h-screen h-[830px] absolute top-0 left-0 z-10 overflow-hidden">
+		<div className="w-full xss:h-screen h-[120vh] absolute top-0 left-0 z-10 overflow-hidden">
 			<Particles
 				id="tsparticles"
 				init={particlesInit}
 				options={particlesOptions}
 				responsive={[true]}
-				loaded={(container) => {
-					container.interactivity.events.onClick.mode = "push";
-					container.interactivity.events.onClick.callback =
-						handleParticlesClick;
-				}}
+				loaded={particlesLoaded}
 			/>
 		</div>
 	);

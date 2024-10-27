@@ -60,7 +60,8 @@ html {
 body {
 	margin: var(--header-height) 0 0 0;
 	font-family: var(--body-font);
-	background-color: rgb(31, 41, 55);
+	/* background-color: rgb(41, 41, 41); */
+	/* background-color: rgb(187, 196, 208); */
 	font-size: var(--normal-font-size);
 	width: 100%;
 	color: var(--second-color);
@@ -70,6 +71,8 @@ body {
 }
 h1 {
 	font-family: "Kalam";
+	margin: 0;
+	margin-left: 26.3%;
 	width: 60%;
 }
 h2 {

@@ -2,18 +2,29 @@ import React from "react";
 import tamvoes from "../assets/img/TAMVOES.png";
 import TD from "../assets/img/TDBank.png";
 import FIF from "../assets/img/FIF.jpg";
+import { ThemeContext } from "./ThemeContext";
+import { useContext } from "react";
 const Experience = () => {
+	const { isDarkMode } = useContext(ThemeContext);
 	return (
 		<section
 			id="experience"
-			className=" flex flex-col items-center justify-center py-10 px-10 bg-gray-800 text-white"
+			className={` flex flex-col items-center justify-center py-10 xs:px-10 px-2  text-white ${
+				isDarkMode ? "dark-theme" : "light-theme"
+			}`}
 		>
-			<h2 className="text-4xl font-bold mb-8 text-center self-center">
+			<h2 className="xs:text-4xl text-[200%] font-bold mb-8 text-center ">
 				Experience
 			</h2>
 			<div className="space-y-8">
-				<div className="md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl">
-					<div className="bg-gray-700 p-6 rounded-lg shadow-lg md:flex-row flex-col flex justify-between mt-5">
+				<div className={`md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl `}>
+					<div
+						className={`${
+							isDarkMode
+								? "bg-gradient-opacity-50-dark"
+								: "bg-gradient-opacity-50-light"
+						}   p-6 rounded-lg shadow-xl md:flex-row flex-col flex justify-between mt-5`}
+					>
 						<div>
 							<div className="flex justify-between w-full">
 								<h3 className="text-xl font-semibold">
@@ -58,12 +69,18 @@ const Experience = () => {
 						</div>
 						<img
 							src={FIF}
-							className="h-[225px] ml-4 rounded-lg w-[240px] object-fill self-center xsxs:mt-5 xs:mt-3"
+							className="h-[225px] ml-4 rounded-lg w-[240px] object-fill self-center xsxs:mt-5 mt-3"
 							alt="Fill it Forward"
 						/>
 					</div>
 
-					<div className="bg-gray-700 p-6 mt-5 rounded-lg md:flex-row flex-col shadow-lg flex justify-between items-start">
+					<div
+						className={` p-6 rounded-lg shadow-xl md:flex-row flex-col flex justify-between mt-5 ${
+							isDarkMode
+								? "bg-gradient-opacity-50-dark"
+								: "bg-gradient-opacity-50-light"
+						}`}
+					>
 						<div className="items-center">
 							<div className="flex justify-between w-full">
 								<h3 className="text-xl font-semibold">QA Analyst Intern</h3>
@@ -99,12 +116,18 @@ const Experience = () => {
 						</div>
 						<img
 							src={tamvoes}
-							className="h-[225px] object-fill rounded-lg ml-5 self-center xsxs:mt-5 xs:mt-3"
+							className="h-[225px] object-fill rounded-lg ml-5 self-center xsxs:mt-5 mt-3"
 							alt="TAMVOES"
 						/>
 					</div>
 
-					<div className="bg-gray-700 p-6 rounded-lg mt-5 md:flex-row flex-col shadow-lg flex justify-between items-start">
+					<div
+						className={` p-6 rounded-lg mt-5 md:flex-row flex-col shadow-xl flex justify-between items-start ${
+							isDarkMode
+								? "bg-gradient-opacity-50-dark"
+								: "bg-gradient-opacity-50-light"
+						}  `}
+					>
 						<div className=" items-center">
 							<div className="flex justify-between w-full">
 								<h3 className="text-xl font-semibold">
@@ -146,7 +169,7 @@ const Experience = () => {
 						</div>
 						<img
 							src={TD}
-							className="h-[200px] object-fill rounded-lg ml-5 self-center xsxs:mt-5 xs:mt-3"
+							className="h-[200px] object-fill rounded-lg ml-5 self-center xsxs:mt-5 mt-3"
 							alt="TD Bank"
 						/>
 					</div>

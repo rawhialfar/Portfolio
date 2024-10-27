@@ -47,8 +47,35 @@ module.exports = {
 				md: "0.375rem",
 				lg: "0.5rem",
 				full: "9999px"
+			},
+			extend: {
+				textStrokeWidth: {
+					1: "1px",
+					2: "2px"
+				},
+				textStrokeColor: {
+					black: "black",
+					red: "red"
+				}
 			}
 		}
 	},
-	plugins: []
+	plugins: [
+		function ({ addUtilities }) {
+			addUtilities({
+				".text-stroke-1": {
+					"-webkit-text-stroke-width": "1px"
+				},
+				".text-stroke-2": {
+					"-webkit-text-stroke-width": "2px"
+				},
+				".text-stroke-black": {
+					"-webkit-text-stroke-color": "black"
+				},
+				".text-stroke-red": {
+					"-webkit-text-stroke-color": "red"
+				}
+			});
+		}
+	]
 };
