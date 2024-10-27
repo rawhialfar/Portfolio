@@ -43,7 +43,7 @@ const Projects = () => {
 							<h3 className="xs:text-3xl text-2xl font-semibold mb-2 items-start">
 								Molecule Viewer
 							</h3>
-							<h4 className="xs:text-xl mb-4 italic text-gray-300">
+							<h4 className="xs:text-xl mb-4 italic ">
 								C, Python, JS, HTML, CSS, AJAX, JQuery, and SQL
 							</h4>
 						</div>
@@ -104,7 +104,7 @@ const Projects = () => {
 							<h3 className="xs:text-3xl text-2xl font-semibold mb-2 items-start">
 								Course Manager
 							</h3>
-							<h4 className="xs:text-xl mb-4 italic text-gray-300">
+							<h4 className="xs:text-xl mb-4 italic ">
 								PHP, JavaScript, HTML, CSS, Python, Figma
 							</h4>
 						</div>
@@ -170,7 +170,7 @@ const Projects = () => {
 							<h3 className="xs:text-3xl text-2xl font-semibold mb-2 items-start">
 								Weather App
 							</h3>
-							<h4 className="xs:text-xl mb-4 italic text-gray-300">
+							<h4 className="xs:text-xl mb-4 italic ">
 								JavaScript, HTML, CSS, React
 							</h4>
 						</div>
@@ -225,7 +225,7 @@ const Projects = () => {
 							<h3 className="xs:text-3xl text-2xl font-semibold mb-2 items-start">
 								Stock Portofolio
 							</h3>
-							<h4 className="xs:text-xl mb-4 italic text-gray-300">Java</h4>
+							<h4 className="xs:text-xl mb-4 italic ">Java</h4>
 						</div>
 						<div className="w-full flex flex-col justify-center">
 							<ul className="list-disc ml-8 xs:text-xl">
