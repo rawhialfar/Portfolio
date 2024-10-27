@@ -40,7 +40,7 @@ const Navbar = () => {
 
 	const bodyGradient = isDarkMode
 		? "linear-gradient(to top right, rgba(30, 58, 138, 0.3), rgba(33, 67, 168, 0.3), rgba(59, 35, 211, 0.3), rgba(204, 0, 255, 0.3))"
-		: "linear-gradient(to top right, rgba(30, 58, 138, 0.1), rgba(33, 67, 168, 0.1), rgba(59, 35, 211, 0.2), rgba(128, 0, 255, 0.2))";
+		: "linear-gradient(to top right, rgba(30, 58, 138, 0.3), rgba(33, 67, 168, 0.3), rgba(59, 35, 211, 0.3), rgba(128, 0, 255, 0.3))";
 
 	const bodyBackgroundColor = isDarkMode ? "black" : "white";
 
