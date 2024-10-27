@@ -69,10 +69,10 @@
 .bg-gradient-opacity-50-light {
 	background: linear-gradient(
 		to right,
-		rgb(190, 196, 232, 0.3),
-		rgb(195, 189, 240, 0.3),
-		rgb(203, 185, 246, 0.3),
-		rgb(210, 182, 251, 0.3)
+		rgb(190, 196, 232, 0.9),
+		rgb(195, 189, 240, 0.9),
+		rgb(203, 185, 246, 0.9),
+		rgb(210, 182, 251, 1)
 	);
 }
 .bg-gradient-opacity-100-light {
@@ -94,17 +94,13 @@
 .bg-gradient-opacity-50-dark {
 	background: linear-gradient(
 		to right,
-		rgb(12, 18, 54, 0.5),
-		rgb(14, 15, 57, 0.3),
-		rgb(17, 12, 63, 0.1),
-		rgb(28, 8, 67, 0.1),
-		rgb(45, 3, 72, 0.1)
+		rgb(12, 18, 54, 0.8),
+		rgb(14, 15, 57, 0.8),
+		rgb(17, 12, 63, 0.8),
+		rgb(28, 8, 67, 0.8),
+		rgb(45, 3, 72, 0.8)
 	);
 	/* Ensure the gradient fills the entire container */
-	background-size: cover;
-	background-blend-mode: multiply;
-	background-repeat: no-repeat; /* Prevent the gradient from repeating */
-	background-position: center; /* Center the gradient */
 }
 
 .bg-gradient-opacity-100-dark {

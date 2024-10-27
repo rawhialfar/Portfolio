@@ -227,7 +227,7 @@ const Navbar = () => {
 			<div
 				className={`${
 					isOpen ? "block" : "hidden"
-				} lg:hidden fixed top-[80px] left-0 w-full ] ${
+				} lg:hidden fixed top-[80px] left-0 w-full  ${
 					windowScroll > 800
 						? isDarkMode
 							? "bg-gradient-opacity-100-dark"
@@ -239,7 +239,7 @@ const Navbar = () => {
 						  }`
 				} ${
 					isDarkMode ? "dark-theme" : "light-theme"
-				}  py-5 space-y-4 flex flex-col items-center z-40`}
+				}  py-5 space-y-4 flex flex-col items-center z-50`}
 			>
 				<a
 					href="#about"
