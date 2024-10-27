@@ -21,8 +21,8 @@ const Experience = () => {
 					<div
 						className={`${
 							isDarkMode
-								? "bg-gradient-opacity-50-dark"
-								: "bg-gradient-opacity-50-light"
+								? "bg-gradient-opacity-60-dark"
+								: "bg-gradient-opacity-60-light"
 						}   p-6 rounded-lg shadow-xl md:flex-row flex-col flex justify-between mt-5`}
 					>
 						<div>
@@ -77,8 +77,8 @@ const Experience = () => {
 					<div
 						className={` p-6 rounded-lg shadow-xl md:flex-row flex-col flex justify-between mt-5 ${
 							isDarkMode
-								? "bg-gradient-opacity-50-dark"
-								: "bg-gradient-opacity-50-light"
+								? "bg-gradient-opacity-60-dark"
+								: "bg-gradient-opacity-60-light"
 						}`}
 					>
 						<div className="items-center">
@@ -124,8 +124,8 @@ const Experience = () => {
 					<div
 						className={` p-6 rounded-lg mt-5 md:flex-row flex-col shadow-xl flex justify-between items-start ${
 							isDarkMode
-								? "bg-gradient-opacity-50-dark"
-								: "bg-gradient-opacity-50-light"
+								? "bg-gradient-opacity-60-dark"
+								: "bg-gradient-opacity-60-light"
 						}  `}
 					>
 						<div className=" items-center">

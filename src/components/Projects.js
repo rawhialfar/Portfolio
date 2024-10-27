@@ -33,8 +33,8 @@ const Projects = () => {
 				<div
 					className={` p-6 md:w-5/6 rounded-lg shadow-xl flex md:flex-row flex-col justify-between ${
 						isDarkMode
-							? "bg-gradient-opacity-50-dark"
-							: "bg-gradient-opacity-50-light"
+							? "bg-gradient-opacity-60-dark"
+							: "bg-gradient-opacity-60-light"
 					} `}
 				>
 					{/* Left Section - Text */}
@@ -94,8 +94,8 @@ const Projects = () => {
 				<div
 					className={`${
 						isDarkMode
-							? "bg-gradient-opacity-50-dark"
-							: "bg-gradient-opacity-50-light"
+							? "bg-gradient-opacity-60-dark"
+							: "bg-gradient-opacity-60-light"
 					} p-6 md:w-5/6 rounded-lg shadow-xl flex md:flex-row flex-col justify-between`}
 				>
 					{/* Left Section - Text */}
@@ -160,8 +160,8 @@ const Projects = () => {
 				<div
 					className={`${
 						isDarkMode
-							? "bg-gradient-opacity-50-dark"
-							: "bg-gradient-opacity-50-light"
+							? "bg-gradient-opacity-60-dark"
+							: "bg-gradient-opacity-60-light"
 					} p-6 md:w-5/6 rounded-lg shadow-xl flex md:flex-row flex-col justify-between`}
 				>
 					{/* Left Section - Text */}
@@ -215,8 +215,8 @@ const Projects = () => {
 				<div
 					className={`${
 						isDarkMode
-							? "bg-gradient-opacity-50-dark"
-							: "bg-gradient-opacity-50-light"
+							? "bg-gradient-opacity-60-dark"
+							: "bg-gradient-opacity-60-light"
 					} p-6 md:w-5/6 rounded-lg shadow-xl flex md:flex-row flex-col justify-between`}
 				>
 					{/* Left Section - Text */}

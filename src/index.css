@@ -65,7 +65,25 @@
 	backdrop-filter: blur(4px);
 	padding-block: 40px;
 }
-
+.bg-gradient-opacity-60-light {
+	background: linear-gradient(
+		to top right,
+		rgba(30, 58, 138, 0.2),
+		rgba(33, 67, 168, 0.1),
+		rgba(59, 35, 211, 0.2),
+		rgba(128, 0, 255, 0.1)
+	);
+}
+.bg-gradient-opacity-60-dark {
+	background: linear-gradient(
+		to right,
+		rgba(30, 58, 138, 0.4),
+		rgba(33, 67, 168, 0.3),
+		rgba(59, 35, 211, 0.3),
+		rgba(128, 0, 255, 0.4)
+	);
+	background-color: rgb(5, 5, 5, 0.2);
+}
 .bg-gradient-opacity-50-light {
 	background: linear-gradient(
 		to right,
