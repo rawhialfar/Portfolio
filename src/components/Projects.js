@@ -16,7 +16,7 @@ const Projects = () => {
 		false,
 		false,
 		false
-	]); // Track visibility of each card
+	]); 
 
 	useEffect(() => {
 		const observers = cardRefs.map((ref, index) => {
@@ -28,7 +28,7 @@ const Projects = () => {
 						return newVisibility;
 					});
 				},
-				{ threshold: 0.1 } // Adjust threshold for visibility timing
+				{ threshold: 0.1 } 
 			);
 		});
 
@@ -120,7 +120,6 @@ const Projects = () => {
 								: "bg-gradient-opacity-60-light"
 						} ${cardVisibility[index] ? "fade-in" : "fade-out"}`}
 					>
-						{/* Left Section - Text */}
 						<div className="md:flex-col w-full">
 							<div className="flex-col w-full">
 								<h3 className="xs:text-3xl text-2xl font-semibold mb-2 items-start">
@@ -152,7 +151,6 @@ const Projects = () => {
 								</a>
 							</div>
 						</div>
-						{/* Bottom Section - Images */}
 						<div className="w-full h-full flex flex-col justify-end items-end space-x-4">
 							{project.images.map((image, imgIndex) => (
 								<img
@@ -161,8 +159,8 @@ const Projects = () => {
 									alt={`${project.title} ${imgIndex + 1}`}
 									className={`object-cover rounded-lg self-end ${
 										project.title === "Weather App"
-											? "md:w-[50%]" // Custom width for Weather App image
-											: "md:w-[70%]" // Default width for other project images
+											? "md:w-[50%]" 
+											: "md:w-[70%]" 
 									} h-auto`}
 								/>
 							))}
