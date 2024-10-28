@@ -60,10 +60,7 @@ const Projects = () => {
 				isDarkMode ? "dark-theme" : "light-theme"
 			}`}
 		>
-			<h2
-				className={`xsxs:text-4xl text-[150%] font-bold mb-8 text-center 
-				${cardVisibility[0] ? "fade-in" : "fade-out"}`}
-			>
+			<h2 className="xsxs:text-4xl text-[150%] font-bold mb-8 text-center">
 				Projects
 			</h2>
 
@@ -79,7 +76,7 @@ const Projects = () => {
 							"Enabled data storage, editing, rotation, and viewing, hosting the server with jQuery to enhance functionality."
 						],
 						link: "https://github.com/rawhialfar/Jquery-Webserver",
-						image: webserver
+						images: [webserver]
 					},
 					{
 						title: "Course Manager",
@@ -90,7 +87,7 @@ const Projects = () => {
 							"Implemented vis.js to create a visual course path optimization tool."
 						],
 						link: "https://github.com/rawhialfar/Course-Manager",
-						image: CourseManager
+						images: [CourseManager, CourseTable] // Multiple images
 					},
 					{
 						title: "Weather App",
@@ -100,7 +97,7 @@ const Projects = () => {
 							"Integrated the Open Weather API for real-time data retrieval and efficient weather updates."
 						],
 						link: "https://weatherapp-pr.netlify.app/",
-						image: WeatherApp
+						images: [WeatherApp]
 					},
 					{
 						title: "Stock Portfolio",
@@ -111,7 +108,7 @@ const Projects = () => {
 							"Maintained with continuous development strategies and refined code."
 						],
 						link: "https://github.com/rawhialfar/ePortfolio",
-						image: StockPortfolio
+						images: [StockPortfolio]
 					}
 				].map((project, index) => (
 					<div
@@ -124,8 +121,8 @@ const Projects = () => {
 						} ${cardVisibility[index] ? "fade-in" : "fade-out"}`}
 					>
 						{/* Left Section - Text */}
-						<div className="md:flex-col w-full md:w-1/2">
-							<div className="flex-col w-full md:w-[60%]">
+						<div className="md:flex-col w-full">
+							<div className="flex-col w-full">
 								<h3 className="xs:text-3xl text-2xl font-semibold mb-2 items-start">
 									{project.title}
 								</h3>
@@ -153,14 +150,31 @@ const Projects = () => {
 								</a>
 							</div>
 						</div>
-						{/* Right Section - Image */}
-						<div className="w-full md:w-1/2 flex justify-end items-end">
-							<img
-								src={project.image}
-								alt={project.title}
-								className="object-cover rounded-lg md:w-[70%] h-auto self-center"
-							/>
+						{/* Bottom Section - Images */}
+						<div className="w-full h-full flex flex-col justify-end items-end space-x-4">
+							{project.images.map((image, imgIndex) => (
+								<img
+									key={imgIndex}
+									src={image}
+									alt={`${project.title} ${imgIndex + 1}`}
+									className={`object-cover rounded-lg self-end ${
+										project.title === "Weather App"
+											? "md:w-[50%]" // Custom width for Weather App image
+											: "md:w-[70%]" // Default width for other project images
+									} h-auto`}
+								/>
+							))}
 						</div>
+						{/* <div className="w-full   justify-end items-end ">
+							{project.images.map((image, imgIndex) => (
+								<img
+									key={imgIndex}
+									src={image}
+									alt={`${project.title} ${imgIndex + 1}`}
+									className="object-cover flex flex-col rounded-lg md:w-[70%] self-end h-auto"
+								/>
+							))}
+						</div> */}
 					</div>
 				))}
 			</div>
