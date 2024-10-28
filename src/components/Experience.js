@@ -3,27 +3,69 @@ import tamvoes from "../assets/img/TAMVOES.png";
 import TD from "../assets/img/TDBank.png";
 import FIF from "../assets/img/FIF.jpg";
 import { ThemeContext } from "./ThemeContext";
-import { useContext } from "react";
+import { useContext, useRef, useState, useEffect } from "react";
 const Experience = () => {
 	const { isDarkMode } = useContext(ThemeContext);
+	const sectionRef = useRef(null);
+	const [isVisible, setIsVisible] = useState(false);
+	const cardRefs = [useRef(null), useRef(null), useRef(null)]; // Refs for each card
+	const [cardVisibility, setCardVisibility] = useState([false, false, false]); // Track visibility of each card
+
+	useEffect(() => {
+		const observers = cardRefs.map((ref, index) => {
+			return new IntersectionObserver(
+				([entry]) => {
+					setCardVisibility((prevVisibility) => {
+						const newVisibility = [...prevVisibility];
+						newVisibility[index] = entry.isIntersecting;
+						return newVisibility;
+					});
+				},
+				{ threshold: 0.1 } // Adjust threshold to control fade in/out timing
+			);
+		});
+
+		cardRefs.forEach((ref, index) => {
+			if (ref.current) {
+				observers[index].observe(ref.current);
+			}
+		});
+
+		return () => {
+			observers.forEach((observer, index) => {
+				if (cardRefs[index].current) {
+					observer.unobserve(cardRefs[index].current);
+				}
+			});
+		};
+	}, []);
+
 	return (
 		<section
 			id="experience"
+			ref={sectionRef}
 			className={` flex flex-col items-center justify-center py-10 xs:px-10 px-2  text-white ${
 				isDarkMode ? "dark-theme" : "light-theme"
-			}`}
+			} `}
 		>
-			<h2 className="xsxs:text-4xl text-[150%] font-bold mb-8 text-center ">
+			<h2
+				className={`xsxs:text-4xl text-[150%] font-bold mb-8 text-center ${
+					cardVisibility[0] ? "fade-in" : "fade-out"
+				}`}
+			>
 				Experience
 			</h2>
 			<div className="space-y-8">
 				<div className={`md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl `}>
 					<div
+						ref={cardRefs[0]}
 						className={`${
 							isDarkMode
 								? "bg-gradient-opacity-60-dark"
 								: "bg-gradient-opacity-60-light"
-						}   p-6 rounded-lg shadow-xl md:flex-row flex-col flex justify-between mt-5`}
+						} p-6 rounded-lg shadow-xl md:flex-row flex-col flex justify-between mt-5 transition-opacity duration-500 ${
+							cardVisibility[0] ? "fade-in" : "fade-out"
+						}`}
 					>
 						<div>
 							<div className="flex justify-between w-full">
@@ -75,13 +117,16 @@ const Experience = () => {
 					</div>
 
 					<div
-						className={` p-6 rounded-lg shadow-xl md:flex-row flex-col flex justify-between mt-5 ${
+						ref={cardRefs[1]}
+						className={`${
 							isDarkMode
 								? "bg-gradient-opacity-60-dark"
 								: "bg-gradient-opacity-60-light"
+						} p-6 rounded-lg shadow-xl md:flex-row flex-col flex justify-between mt-5 transition-opacity duration-500 ${
+							cardVisibility[1] ? "fade-in" : "fade-out"
 						}`}
 					>
-						<div className="items-center">
+						<div className="items-center ">
 							<div className="flex justify-between w-full">
 								<h3 className="text-xl font-semibold">QA Analyst Intern</h3>
 								<h4 className="text-xl font-semibold text-right">
@@ -122,11 +167,14 @@ const Experience = () => {
 					</div>
 
 					<div
-						className={` p-6 rounded-lg mt-5 md:flex-row flex-col shadow-xl flex justify-between items-start ${
+						ref={cardRefs[2]}
+						className={`${
 							isDarkMode
 								? "bg-gradient-opacity-60-dark"
 								: "bg-gradient-opacity-60-light"
-						}  `}
+						} p-6 rounded-lg mt-5 md:flex-row flex-col shadow-xl flex justify-between items-start transition-opacity duration-500 ${
+							cardVisibility[2] ? "fade-in" : "fade-out"
+						}`}
 					>
 						<div className=" items-center">
 							<div className="flex justify-between w-full">

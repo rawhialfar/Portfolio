@@ -108,6 +108,20 @@
 #logo {
 	text-decoration: none; /* Ensures no automatic underscores are applied */
 }
+.fade-in {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-out {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+#about {
+	transition: opacity 0.5s ease-out;
+}
 
 .bg-gradient-opacity-50-dark {
 	background: linear-gradient(

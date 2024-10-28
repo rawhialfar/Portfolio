@@ -1,20 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef, useContext, useState } from "react";
 import ParticlesComponent from "./ParticlesComponent";
-import { useEffect, useRef, useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 
 const AboutMe = () => {
 	const sectionRef = useRef(null);
 	const { isDarkMode } = useContext(ThemeContext);
+	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			([entry]) => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add("fade-in");
-				}
+				setIsVisible(entry.isIntersecting);
 			},
-			{ threshold: 0.1 } // Triggers when 10% of the section is visible
+			{ threshold: 0.1 } // Adjust threshold for when the fade-in/out effect should trigger
 		);
 
 		if (sectionRef.current) {
@@ -27,13 +25,14 @@ const AboutMe = () => {
 			}
 		};
 	}, []);
+
 	return (
 		<section
 			id="about"
 			ref={sectionRef}
-			className={`z-[-1] pb-10 pt-10 text-white flex flex-col items-center justify-center overflow-x-hidden fade-in ${
+			className={`z-[-1] pb-10 pt-10 text-white flex flex-col items-center justify-center overflow-x-hidden transition-opacity duration-500 ${
 				isDarkMode ? "dark-theme" : "light-theme"
-			}`}
+			} ${isVisible ? "fade-in" : "fade-out"}`}
 		>
 			<h2 className="xs:text-4xl text-[200%] font-bold mb-8 text-center">
 				About Me

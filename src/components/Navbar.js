@@ -145,7 +145,7 @@ const Navbar = () => {
 					>
 						<button
 							onClick={toggleMode}
-							className={`px-[1px] py-[1px] w-[33px] h-[33px] flex items-center justify-center rounded-2xl text-white ${
+							className={`px-[1px] py-[1px] w-[30px] h-[30px] flex items-center justify-center rounded-2xl text-white ${
 								isDarkMode ? "bg-gray-100" : "bg-gray-600"
 							} hover:bg-opacity-80`}
 						>
@@ -155,7 +155,7 @@ const Navbar = () => {
 								size="xl"
 								style={{
 									color: isDarkMode ? "black" : "white",
-									marginRight: isDarkMode ? "0.7px" : "2px"
+									marginRight: isDarkMode ? "0px" : "2px"
 								}} // Sun is black, Moon is white
 							/>
 						</button>
