@@ -13,7 +13,7 @@ const Experience = () => {
 				isDarkMode ? "dark-theme" : "light-theme"
 			}`}
 		>
-			<h2 className="xs:text-4xl text-[200%] font-bold mb-8 text-center ">
+			<h2 className="xsxs:text-4xl text-[150%] font-bold mb-8 text-center ">
 				Experience
 			</h2>
 			<div className="space-y-8">

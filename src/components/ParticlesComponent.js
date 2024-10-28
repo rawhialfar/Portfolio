@@ -93,7 +93,7 @@ const ParticlesComponent = memo((any) => {
 				move: {
 					enable: true,
 					speed: 1.5,
-					direction: "none",
+					direction: "right",
 					outModes: {
 						default: "out"
 					}

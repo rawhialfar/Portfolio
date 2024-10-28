@@ -50,7 +50,7 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`flex h-20 gradient-transition  text-shadow-lg justify-between items-center py-5 px-10 fixed top-0 left-0 right-0 z-50 transition-all duration-10000 ease-in-out
+			className={`flex h-20 gradient-transition text-shadow-lg justify-between items-center py-5 px-10 fixed top-0 left-0 right-0 z-50 transition-all duration-10000 ease-in-out
     		${
 					windowScroll > 800
 						? isDarkMode

@@ -62,7 +62,7 @@ const Hero = () => {
 				<div className="flex md:flex-row flex-col justify-between md:m-[6rem] lg:ml-[20rem] items-center lg:gap-x-[10rem] gap-x-[5rem] 3xl:gap-x-[37rem]">
 					<div
 						id="blobbers"
-						className="relative z-10  flex 2xl:w-[700px] 2xl:h-[400px] h-[300px] md:w-[400px] w-3/4 overflow-hidden border-2 border-gray-800 -mt-8" // Added negative top margin
+						className="relative z-10  flex 2xl:w-[700px] 2xl:h-[400px] h-[200px] md:w-[300px] w-3/4 overflow-hidden border-2 border-gray-800 -mt-8" // Added negative top margin
 					>
 						<img
 							src={selfie} // Use your image path here
@@ -77,7 +77,7 @@ const Hero = () => {
 						{/* Static Text */}
 						<h1
 							id="Hello"
-							className="md:text-[13vh] text-shadow md:mr-8 text-4xl flex justify-center "
+							className="xl:text-[10vh] md:text-[80px] text-shadow md:mr-8 text-4xl flex justify-center "
 						>
 							Hello{" "}
 							<span role="img" aria-label="wave">
@@ -99,7 +99,7 @@ const Hero = () => {
 							<h3 className="md:text-3xl md:ml-5 text-shadow text-2xl flex md:flex-row flex-col justify-center md:justify-start">
 								I'm a
 								<span
-									className={`ml-[8px] text-gradient font-bold text-3xl ${color}`}
+									className={`ml-[8px] text-gradient font-bold md:text-3xl text-2xl ${color}`}
 									style={{
 										color: colors[colorIndex],
 										transition: "color 3s ease"
