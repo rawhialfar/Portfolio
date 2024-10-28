@@ -146,7 +146,9 @@ const Projects = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									View on GitHub
+									{project.title == "Weather App"
+										? "View Live App"
+										: "View on GitHub"}
 								</a>
 							</div>
 						</div>
