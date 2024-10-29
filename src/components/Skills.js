@@ -45,7 +45,8 @@ import {
 	SiFlutter,
 	SiPrismic,
 	SiVisualbasic,
-	SiR
+	SiR,
+	SiDeluge
 } from "react-icons/si";
 import { IoCarOutline, IoFootballOutline } from "react-icons/io5";
 const Tooltip = ({ text }) => (
@@ -108,6 +109,7 @@ const Skills = () => {
 						<SkillIcon Icon={SiCakephp} name="PHP" />
 						<SkillIcon Icon={FaDatabase} name="SQL" />
 						<SkillIcon Icon={SiVisualbasic} name="VBA" />
+						<SkillIcon Icon={SiDeluge} name="Deluge" />
 					</div>
 				</div>
 
@@ -144,6 +146,7 @@ const Skills = () => {
 						<SkillIcon Icon={SiAsana} name="Asana" />
 						<SkillIcon Icon={SiFirebase} name="Firebase" />
 						<SkillIcon Icon={SiPrismic} name="Prismic" />
+						<SkillIcon Icon={SiGooglecloud} name="Google Cloud" />
 					</div>
 				</div>
 			</div>
