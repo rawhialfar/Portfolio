@@ -8,7 +8,7 @@ const Experience = () => {
 	const { isDarkMode } = useContext(ThemeContext);
 	const sectionRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
-	const cardRefs = [useRef(null), useRef(null), useRef(null)]; 
+	const cardRefs = [useRef(null), useRef(null), useRef(null)];
 	const [cardVisibility, setCardVisibility] = useState([false, false, false]);
 
 	useEffect(() => {
@@ -21,7 +21,7 @@ const Experience = () => {
 						return newVisibility;
 					});
 				},
-				{ threshold: 0.1 } 
+				{ threshold: 0.1 }
 			);
 		});
 
@@ -49,7 +49,7 @@ const Experience = () => {
 			} `}
 		>
 			<h2
-				className={`xsxs:text-4xl text-[150%] font-bold mb-8 text-center ${
+				className={`xsxs:text-4xl text-3xl font-bold mb-8 text-center ${
 					cardVisibility[0] ? "fade-in" : "fade-out"
 				}`}
 			>

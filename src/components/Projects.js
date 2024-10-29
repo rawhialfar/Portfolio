@@ -59,7 +59,7 @@ const Projects = () => {
 				isDarkMode ? "dark-theme" : "light-theme"
 			}`}
 		>
-			<h2 className="xsxs:text-4xl text-[150%] font-bold mb-8 text-center">
+			<h2 className="xsxs:text-4xl text-3xl font-bold mb-8 text-center">
 				Projects
 			</h2>
 
