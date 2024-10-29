@@ -119,11 +119,11 @@ const Skills = () => {
 						<SkillIcon Icon={FaNodeJs} name="Node.js" />
 						<SkillIcon Icon={SiNextdotjs} name="Next.js" />
 						<SkillIcon Icon={SiFlutter} name="Flutter" />
-						<SkillIcon Icon={SiPostgresql} name="PostgreSQL" />
 						<SkillIcon Icon={SiMysql} name="MySQL" />
 						<SkillIcon Icon={SiGraphql} name="GraphQL" />
 						<SkillIcon Icon={FaBootstrap} name="Bootstrap" />
 						<SkillIcon Icon={SiTailwindcss} name="Tailwind CSS" />
+						<SkillIcon Icon={SiJquery} name="jQuery" />
 						<SkillIcon Icon={FaAws} name="AWS" />
 						<SkillIcon Icon={SiJest} name="Jest" />
 						<SkillIcon Icon={SiJunit5} name="JUnit" />
