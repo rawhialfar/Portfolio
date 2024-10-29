@@ -69,28 +69,28 @@
 	background: linear-gradient(
 		to top right,
 		rgba(30, 58, 138, 0.2),
-		rgba(33, 67, 168, 0.1),
+		rgba(33, 67, 168, 0.2),
 		rgba(59, 35, 211, 0.2),
-		rgba(128, 0, 255, 0.1)
+		rgba(128, 0, 255, 0.2)
 	);
 }
 
 .bg-gradient-opacity-50-light {
 	background: linear-gradient(
 		to right,
-		rgb(190, 196, 232, 0.9),
-		rgb(195, 189, 240, 0.9),
-		rgb(203, 185, 246, 0.9),
-		rgb(210, 182, 251, 1)
+		rgb(227,228,246, 0.2),
+		rgb(217,212,247, 0.2),
+		rgb(220,209,249, 0.2),
+		rgb(224,206,251, 0.2)
 	);
 }
 .bg-gradient-opacity-100-light {
 	background: linear-gradient(
 		to right,
-		rgb(190, 196, 232),
-		rgb(195, 189, 240),
-		rgb(203, 185, 246),
-		rgb(210, 182, 251)
+		rgb(227,228,246),
+		rgb(217,212,247),
+		rgb(220,209,249),
+		rgb(224,206,251)
 	);
 	background-size: cover;
 	background-repeat: no-repeat;
