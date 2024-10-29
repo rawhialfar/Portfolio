@@ -101,7 +101,22 @@ const Navbar = () => {
 					>
 						About Me
 					</a>
-
+					<a
+						href="#skills"
+						onClick={(e) => {
+							e.preventDefault();
+							const element = document.getElementById("skills");
+							const yOffset = -60;
+							const y =
+								element.getBoundingClientRect().top +
+								window.pageYOffset +
+								yOffset;
+							window.scrollTo({ top: y, behavior: "smooth" });
+						}}
+						className="hover:text-gray-400  transition-transform duration-300 ease-in-out hover:-translate-y-1"
+					>
+						Skills
+					</a>
 					<a
 						href="#experience"
 						onClick={(e) => {
@@ -257,7 +272,22 @@ const Navbar = () => {
 				>
 					About Me
 				</a>
-
+				<a
+					href="#skills"
+					onClick={(e) => {
+						e.preventDefault();
+						const element = document.getElementById("skills");
+						const yOffset = -50;
+						const y =
+							element.getBoundingClientRect().top +
+							window.pageYOffset +
+							yOffset;
+						window.scrollTo({ top: y, behavior: "smooth" });
+					}}
+					className="text-xl justify-center transition-transform duration-300 ease-in-out hover:-translate-y-1"
+				>
+					Skills
+				</a>
 				<a
 					href="#experience"
 					onClick={(e) => {

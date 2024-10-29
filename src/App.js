@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ParticlesComponent from "./components/ParticlesComponent";
 import { ThemeProvider } from "./components/ThemeContext"; // Adjust the path accordingly
@@ -24,7 +25,7 @@ function App() {
 		<ThemeProvider>
 			<Hero />
 			<AboutMe />
-			{/* <Skills /> */}
+			<Skills />
 			<Experience />
 			<Projects />
 			{/* <Contact /> */}

@@ -107,8 +107,8 @@ const Hero = () => {
 								>
 									<ReactTyped
 										strings={stringsToRender}
-										typeSpeed={100}
-										backSpeed={100}
+										typeSpeed={90}
+										backSpeed={90}
 										loop
 									/>
 								</span>

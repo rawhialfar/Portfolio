@@ -12,7 +12,7 @@ const AboutMe = () => {
 			([entry]) => {
 				setIsVisible(entry.isIntersecting);
 			},
-			{ threshold: 0.1 } // Adjust threshold for when the fade-in/out effect should trigger
+			{ threshold: 0.1 }
 		);
 
 		if (sectionRef.current) {

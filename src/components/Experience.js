@@ -8,8 +8,8 @@ const Experience = () => {
 	const { isDarkMode } = useContext(ThemeContext);
 	const sectionRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
-	const cardRefs = [useRef(null), useRef(null), useRef(null)]; // Refs for each card
-	const [cardVisibility, setCardVisibility] = useState([false, false, false]); // Track visibility of each card
+	const cardRefs = [useRef(null), useRef(null), useRef(null)]; 
+	const [cardVisibility, setCardVisibility] = useState([false, false, false]);
 
 	useEffect(() => {
 		const observers = cardRefs.map((ref, index) => {
@@ -21,7 +21,7 @@ const Experience = () => {
 						return newVisibility;
 					});
 				},
-				{ threshold: 0.1 } // Adjust threshold to control fade in/out timing
+				{ threshold: 0.1 } 
 			);
 		});
 

@@ -7,16 +7,16 @@ import StockPortfolio from "../assets/img/StockPortfolio.png";
 import { ThemeContext } from "./ThemeContext";
 
 const Projects = () => {
-	const [expandedCard, setExpandedCard] = useState(null); // Tracks the expanded card
+	const [expandedCard, setExpandedCard] = useState(null);
 	const { isDarkMode } = useContext(ThemeContext);
 	const sectionRef = useRef(null);
-	const cardRefs = [useRef(null), useRef(null), useRef(null), useRef(null)]; // Refs for each card
-	const [cardVisibility, setCardVisibility] = useState([
-		false,
-		false,
-		false,
-		false
-	]); 
+	const cardRefs = [];
+	const [cardVisibility, setCardVisibility] = useState([]);
+	let numProjects = 4;
+	for (let i = 0; i < numProjects; i++) {
+		cardRefs[i] = useRef(null);
+		setCardVisibility[i] = false;
+	}
 
 	useEffect(() => {
 		const observers = cardRefs.map((ref, index) => {
@@ -28,7 +28,7 @@ const Projects = () => {
 						return newVisibility;
 					});
 				},
-				{ threshold: 0.1 } 
+				{ threshold: 0.1 }
 			);
 		});
 
@@ -47,10 +47,9 @@ const Projects = () => {
 		};
 	}, []);
 
-	// Toggle card expansion
-	const toggleCard = (cardIndex) => {
-		setExpandedCard((prev) => (prev === cardIndex ? null : cardIndex));
-	};
+	// const toggleCard = (cardIndex) => {
+	// 	setExpandedCard((prev) => (prev === cardIndex ? null : cardIndex));
+	// };
 
 	return (
 		<section
@@ -87,7 +86,7 @@ const Projects = () => {
 							"Implemented vis.js to create a visual course path optimization tool."
 						],
 						link: "https://github.com/rawhialfar/Course-Manager",
-						images: [CourseManager, CourseTable] // Multiple images
+						images: [CourseManager, CourseTable]
 					},
 					{
 						title: "Weather App",
@@ -159,8 +158,8 @@ const Projects = () => {
 									alt={`${project.title} ${imgIndex + 1}`}
 									className={`object-cover rounded-lg self-end ${
 										project.title === "Weather App"
-											? "md:w-[50%]" 
-											: "md:w-[70%]" 
+											? "md:w-[50%]"
+											: "md:w-[70%]"
 									} h-auto`}
 								/>
 							))}
