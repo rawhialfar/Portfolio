@@ -144,7 +144,6 @@ const Skills = () => {
 						<SkillIcon Icon={SiAsana} name="Asana" />
 						<SkillIcon Icon={SiFirebase} name="Firebase" />
 						<SkillIcon Icon={SiPrismic} name="Prismic" />
-						<SkillIcon Icon={SiGooglecloud} name="Google Cloud" />
 					</div>
 				</div>
 			</div>
