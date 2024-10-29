@@ -43,7 +43,9 @@ import {
 	SiAsana,
 	SiGooglecloud,
 	SiFlutter,
-	SiPrismic
+	SiPrismic,
+	SiVisualbasic,
+	SiR
 } from "react-icons/si";
 import { IoCarOutline, IoFootballOutline } from "react-icons/io5";
 const Tooltip = ({ text }) => (
@@ -105,6 +107,7 @@ const Skills = () => {
 						<SkillIcon Icon={SiCss3} name="CSS" />
 						<SkillIcon Icon={SiCakephp} name="PHP" />
 						<SkillIcon Icon={FaDatabase} name="SQL" />
+						<SkillIcon Icon={SiVisualbasic} name="VBA" />
 					</div>
 				</div>
 
