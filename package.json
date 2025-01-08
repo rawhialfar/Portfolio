@@ -22,7 +22,6 @@
 		"@types/vara": "^1.1.4",
 		"astro-particles": "^2.10.0",
 		"boxicons": "^2.0.7",
-		"particles.js": "^2.0.0",
 		"react": "^18.0.0",
 		"react-dom": "^18.2.0",
 		"react-font": "^1.2.1",
