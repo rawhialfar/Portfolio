@@ -21,6 +21,7 @@
 		"@tsparticles/react": "^3.0.0",
 		"@types/vara": "^1.1.4",
 		"ajv": "^6",
+		"ajv-keywords": "^3.5.2",
 		"astro-particles": "^2.10.0",
 		"boxicons": "^2.0.7",
 		"react": "^18.0.0",
