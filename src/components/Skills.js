@@ -44,7 +44,7 @@ import {
 	SiGooglecloud,
 	SiFlutter,
 	SiPrismic,
-	SiVisualbasic,
+	// SiVisualbasic,
 	SiR,
 	SiDeluge,
 	SiApollographql
@@ -109,7 +109,7 @@ const Skills = () => {
 						<SkillIcon Icon={SiCss3} name="CSS" />
 						<SkillIcon Icon={SiCakephp} name="PHP" />
 						<SkillIcon Icon={FaDatabase} name="SQL" />
-						<SkillIcon Icon={SiVisualbasic} name="VBA" />
+						{/* <SkillIcon Icon={SiVisualbasic} name="VBA" /> */}
 						<SkillIcon Icon={SiDeluge} name="Deluge" />
 					</div>
 				</div>
