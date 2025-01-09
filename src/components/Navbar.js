@@ -1,6 +1,6 @@
 // src/components/Navbar.js
 import { useState, useEffect, useContext } from "react";
-import Resume from "../assets/Rawhi Alfar - Resume.pdf";
+import Resume from "../assets/Rawhi Alfar- Resume.pdf";
 import Font from "react-font";
 import Logo from "./Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
