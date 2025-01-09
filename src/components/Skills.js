@@ -48,7 +48,7 @@ import {
 	SiDeluge,
 	SiApollographql
 } from "react-icons/si";
-// import { BiLogoVisualStudio } from "react-icons/bi";
+import { BiLogoVisualStudio } from "react-icons/bi";
 import { IoCarOutline, IoFootballOutline } from "react-icons/io5";
 const Tooltip = ({ text }) => (
 	<div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm py-1 px-2 rounded shadow-lg z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -109,7 +109,7 @@ const Skills = () => {
 						<SkillIcon Icon={SiCss3} name="CSS" />
 						<SkillIcon Icon={SiCakephp} name="PHP" />
 						<SkillIcon Icon={FaDatabase} name="SQL" />
-						{/* <SkillIcon Icon={BiLogoVisualStudio} name="VBA" /> */}
+						<SkillIcon Icon={BiLogoVisualStudio} name="VBA" />
 						<SkillIcon Icon={SiDeluge} name="Deluge" />
 					</div>
 				</div>
