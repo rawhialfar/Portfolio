@@ -4,6 +4,10 @@ import CourseManager from "../assets/img/CourseManager.png";
 import CourseTable from "../assets/img/CourseTable.png";
 import WeatherApp from "../assets/img/WeatherApp.png";
 import StockPortfolio from "../assets/img/StockPortfolio.png";
+import AppstinenceHome from "../assets/img/Appstinence1.png"; 
+import AppstinenceStats from "../assets/img/AppstinenceStats.png"; 
+// (add more if you have them)
+
 import { ThemeContext } from "./ThemeContext";
 
 const Projects = () => {
@@ -12,7 +16,7 @@ const Projects = () => {
 	const sectionRef = useRef(null);
 	const cardRefs = [];
 	const [cardVisibility, setCardVisibility] = useState([]);
-	let numProjects = 4;
+	let numProjects = 5;
 	for (let i = 0; i < numProjects; i++) {
 		cardRefs[i] = useRef(null);
 		setCardVisibility[i] = false;
@@ -108,7 +112,19 @@ const Projects = () => {
 						],
 						link: "https://github.com/rawhialfar/ePortfolio",
 						images: [StockPortfolio]
+					},
+					{
+						title: "Appstinence",
+						tech: "Flutter, Kotlin, Dart, Android, Supabase, Native Integration",
+						description: [
+							"Developed a mobile application focused on reducing screen time by blocking distracting apps and tracking app usage patterns.",
+							"Implemented a custom app-blocking system using native Kotlin code combined with Flutter overlays for real-time app blocking.",
+							"Integrated Supabase for backend authentication and data storage, ensuring secure and efficient user management."
+						],
+						link: "https://github.com/rawhialfar/Appstinence",
+						images: [AppstinenceHome, AppstinenceStats]
 					}
+					
 				].map((project, index) => (
 					<div
 						key={index}
