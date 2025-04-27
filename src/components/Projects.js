@@ -177,6 +177,10 @@ const Projects = () => {
 										project.title === "Weather App" || project.title === "Appstinence"
 											? "md:w-[50%]"
 											: "md:w-[70%]"
+									} ${
+										project.title === "Password Manager" 
+											? "md:h-[90%]"
+											: "md:h-[70%]"
 									} h-auto`}
 								/>
 							))}
