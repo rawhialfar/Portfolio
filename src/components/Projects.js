@@ -5,7 +5,7 @@ import CourseTable from "../assets/img/CourseTable.png";
 import WeatherApp from "../assets/img/WeatherApp.png";
 import AppstinenceHome from "../assets/img/Appstinence1.png"; 
 import AppstinenceStats from "../assets/img/Appstinence4.png"; 
-import PasswordManager from "../assets/img/passmanager.png"; 
+import PasswordManager from "../assets/img/PasswordManager.png"; 
 
 // (add more if you have them)
 
