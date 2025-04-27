@@ -173,15 +173,13 @@ const Projects = () => {
 									key={imgIndex}
 									src={image}
 									alt={`${project.title} ${imgIndex + 1}`}
-									className={`object-cover rounded-lg self-end ${
-										project.title === "Weather App" || project.title === "Appstinence"
+									className={`object-cover rounded-lg self-end h-auto ${
+										project.title === "Password Manager"
+											? "md:w-[90%]"
+											: project.title === "Weather App" || project.title === "Appstinence"
 											? "md:w-[50%]"
 											: "md:w-[70%]"
-									} ${
-										project.title === "Password Manager" && project.title !== "Weather App" || project.title !== "Appstinence"
-											? "md:w-[90%]"
-											: "md:w-[70%]"
-									} h-auto`}
+									}`}
 								/>
 							))}
 						</div>
