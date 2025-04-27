@@ -3,9 +3,10 @@ import webserver from "../assets/img/Webserver.png";
 import CourseManager from "../assets/img/CourseManager.png";
 import CourseTable from "../assets/img/CourseTable.png";
 import WeatherApp from "../assets/img/WeatherApp.png";
-import StockPortfolio from "../assets/img/StockPortfolio.png";
 import AppstinenceHome from "../assets/img/Appstinence1.png"; 
 import AppstinenceStats from "../assets/img/Appstinence4.png"; 
+import PasswordManager from "../assets/img/passmanager.png"; 
+
 // (add more if you have them)
 
 import { ThemeContext } from "./ThemeContext";
@@ -103,15 +104,15 @@ const Projects = () => {
 						images: [WeatherApp]
 					},
 					{
-						title: "Stock Portfolio",
-						tech: "Java",
+						title: "Password Manager",
+						tech: "Python, PySide6, Qt, SQL",
 						description: [
-							"Developed a stock portfolio software that allows a user to buy, sell, update, and gain stocks/mutual funds.",
-							"Built using a Java swing application that utilized a GUI environment to make the user experience seamless and easy.",
-							"Maintained with continuous development strategies and refined code."
+							"Built a cross-platform password manager with a secure login system, collapsible category sections, password expiration tracking, and tooltip visibility toggles.",
+							"Designed a responsive, user-friendly UI using PySide6 with dynamic theming for dark and light modes.",
+							"Implemented an SQL-based storage system to manage passwords securely with master password authentication."
 						],
-						link: "https://github.com/rawhialfar/ePortfolio",
-						images: [StockPortfolio]
+						link: "https://github.com/rawhialfar/Passwordmanager",
+						images: [PasswordManager]
 					},
 					{
 						title: "Appstinence",
