@@ -5,7 +5,7 @@ import CourseTable from "../assets/img/CourseTable.png";
 import WeatherApp from "../assets/img/WeatherApp.png";
 import StockPortfolio from "../assets/img/StockPortfolio.png";
 import AppstinenceHome from "../assets/img/Appstinence1.png"; 
-import AppstinenceStats from "../assets/img/AppstinenceStats.png"; 
+import AppstinenceStats from "../assets/img/Appstinence4.png"; 
 // (add more if you have them)
 
 import { ThemeContext } from "./ThemeContext";
