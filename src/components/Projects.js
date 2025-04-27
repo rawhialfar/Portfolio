@@ -179,8 +179,8 @@ const Projects = () => {
 											: "md:w-[70%]"
 									} ${
 										project.title === "Password Manager" 
-											? "md:h-[90%]"
-											: "md:h-[70%]"
+											? "md:w-[90%]"
+											: "md:w-[70%]"
 									} h-auto`}
 								/>
 							))}
