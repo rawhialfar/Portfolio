@@ -178,7 +178,7 @@ const Projects = () => {
 											? "md:w-[50%]"
 											: "md:w-[70%]"
 									} ${
-										project.title === "Password Manager" 
+										project.title === "Password Manager" && project.title !== "Weather App" || project.title !== "Appstinence"
 											? "md:w-[90%]"
 											: "md:w-[70%]"
 									} h-auto`}
