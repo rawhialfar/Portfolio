@@ -122,7 +122,7 @@ const Projects = () => {
 							"Integrated Supabase for backend authentication and data storage, ensuring secure and efficient user management."
 						],
 						link: "https://github.com/rawhialfar/Appstinence",
-						images: [AppstinenceHome, AppstinenceStats]
+						images: [AppstinenceHome]
 					}
 					
 				].map((project, index) => (
@@ -173,7 +173,7 @@ const Projects = () => {
 									src={image}
 									alt={`${project.title} ${imgIndex + 1}`}
 									className={`object-cover rounded-lg self-end ${
-										project.title === "Weather App"
+										project.title === "Weather App" || project.title === "Appstinence"
 											? "md:w-[50%]"
 											: "md:w-[70%]"
 									} h-auto`}
