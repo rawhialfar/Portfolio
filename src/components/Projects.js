@@ -94,7 +94,7 @@ const Projects = () => {
 				"Designed modular UI components with theme switching, responsive layouts, and intuitive data visualization for agent performance and conversation analytics."
 			],
 			link: "https://github.com/rawhialfar/Voice-Dashboard",
-			images: [Dashboard1, Dashboard2, Dashboard3, Dashboard4, Dashboard5, Dashboard6, Dashboard7, Dashboard8, Dashboard9, Dashboard10]
+			images: [Dashboard1, Dashboard10, Dashboard2, Dashboard3, Dashboard4, Dashboard5, Dashboard6, Dashboard7, Dashboard8, Dashboard9]
 		},
 		{
 			title: "Course Manager",
