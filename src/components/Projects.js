@@ -31,7 +31,6 @@ const Projects = () => {
 		setCardVisibility[i] = false;
 	}
 
-	// State for tracking current image index for each project
 	const [currentImageIndexes, setCurrentImageIndexes] = useState({});
 
 	useEffect(() => {
@@ -63,7 +62,6 @@ const Projects = () => {
 		};
 	}, []);
 
-	// Function to navigate to next image
 	const nextImage = (projectIndex, totalImages) => {
 		setCurrentImageIndexes(prev => ({
 			...prev,
@@ -73,7 +71,6 @@ const Projects = () => {
 		}));
 	};
 
-	// Function to navigate to previous image
 	const prevImage = (projectIndex, totalImages) => {
 		setCurrentImageIndexes(prev => ({
 			...prev,
@@ -83,7 +80,6 @@ const Projects = () => {
 		}));
 	};
 
-	// Project data with images arrays
 	const projectsData = [
 		{
 			title: "Genovation Voice Dashboard",
